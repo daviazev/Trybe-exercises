@@ -1,0 +1,8 @@
+internet 
+unix
+bash
+html
+css
+js
+node je
+react 

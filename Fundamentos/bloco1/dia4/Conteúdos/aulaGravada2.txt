@@ -1,0 +1,11 @@
+a
+nessa aula estamos vendo sobre os tipos de acesso de um arquivo 
+
+isso com o comando "ls -l"
+
+r = leitura 
+w = write (pode editar) 
+x = permite executar 
+hifen = arquivo comum 
+d  = é um diretorio
+

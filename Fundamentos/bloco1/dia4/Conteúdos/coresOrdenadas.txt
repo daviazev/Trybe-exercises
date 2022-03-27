@@ -1,0 +1,10 @@
+amarelo
+azul
+cinza 
+#f1f1f1
+#FFFFFF
+marrom
+preto
+roxo
+verde
+vermelho

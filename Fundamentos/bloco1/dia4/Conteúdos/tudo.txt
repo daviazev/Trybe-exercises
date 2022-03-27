@@ -1,0 +1,14 @@
+amarelo
+preto
+vermelho
+azul
+roxo
+verde
+marrom
+cinza 
+#FFFFFF
+#f1f1f1
+banana
+morango
+melancia
+maçã

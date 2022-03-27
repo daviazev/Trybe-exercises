@@ -1,0 +1,11 @@
+isso aqui 
+é um arquivo feito por um brasileiro 
+estou colocando frases aleatórias 
+pelo terminal 
+usando o comando cat > nome_do_arquivo.txt
+bla
+brbrbr
+minha nick no xbox é WaltHeisenbr
+tchau
+Brasil
+Canadá

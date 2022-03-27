@@ -1,0 +1,48 @@
+comando "cat >" pode receber valores como inputs
+
+EXEMPLO
+
+cat > nome_do_arquivo.txt  vai abrir um espaço para colocar elementos, e fica salvo no arquivo. 
+
+______________________
+
+comando "cat >>" pode editar arquivos 
+
+cat >> nome_do_arquivo.txt 
+
+_______________________
+
+dá pra juntar o conteúdo de 2 ou + arquivos e colocar tudo em um terceiro, assim: 
+
+cat arquivo1.txt arquivo2.txt > arquivo3.txt
+
+"cat arquivo3.txt" então, lista o conteúdo dos arquivos arquivo1.txt e arquivo2.txt todos juntos.
+_________________________
+
+comando "sort <" ordena o conteúdo do arquivo em ordem alfabética
+
+sort < nome_do_arquivo.txt
+
+_________________________
+
+sort < nomeArquivo.txt > novoArquivo.txt
+
+Aqui, tá ordenando o conteudo de nomeArquivo.txt e colocando tudo em novoArquivo.txt
+
+_________________________
+
+comando "who" mostra quem tem acesso ao sistema, pasta/arquivo
+
+_________________________
+
+"|" isso em aspas é chamado de "pipe"
+
+ele consegue juntar os outputs de um comando e passá-lo para outro comando. 
+
+EXEMPLOS
+
+who | sort -----> aqui ele ve quem tem acesso ao sistema e coloca em ordem alfabética 
+
+who | wc -l -----> aqui ele ve quem tem acesso e diz a quantidade de linhas
+
+
