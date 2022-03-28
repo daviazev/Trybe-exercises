@@ -1,1 +1,1 @@
-Meu primeiro repositório Git.
+Meu primeiro repositorio Git. (feito pelo terminal do VS Code). 
