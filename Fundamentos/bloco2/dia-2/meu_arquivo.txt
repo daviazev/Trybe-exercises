@@ -1,1 +1,2 @@
 Meu primeiro repositorio Git. (feito pelo terminal do VS Code). 
+- Redes
