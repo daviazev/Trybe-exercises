@@ -1,2 +1,17 @@
 Meu primeiro repositorio Git. (feito pelo terminal do VS Code). 
+trybe-skills-updates
 - Redes
+=======
+O que eu vou aprender na Trybe: 
+
+- Unix
+- Bash
+- Git
+- HTML
+- Javascript
+- React
+- Node JS
+- SQL
+- Python
+- Soft Skills
+main
