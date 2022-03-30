@@ -1,5 +1,6 @@
-#Git & GitHub 
-###O que é e para que serve
+Git & GitHub 
+
+O que é e para que serve
 
 <p> 
   Neste dia aprendi sobre o uso do Git, um sistema de controle de versão amplamente utilizado no mundo do desenvolvimento de software!
