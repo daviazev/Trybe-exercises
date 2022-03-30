@@ -1,0 +1,12 @@
+
+Sala 8 | TEAM EIGHT FORCES | 
+
+1 - Usuário digita o endereço web e dá enter 
+2 - Cliente/navegador faz requisição HTTP pro servidor e ele responde com o código para o cliente
+3 - Direciona pro DNS 
+4 - Servidor recebe e armazena dados  
+5 - Servidor retorna os dados referentes à solicitação feita 
+6 - Cliente (browser) interpreta os dados enviados
+7 - Navegador renderiza com o motor gráfico 
+8 - Visualização da página
+
