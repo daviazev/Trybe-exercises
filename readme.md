@@ -13,11 +13,11 @@
 
 * <strong> _[Bloco 02: Git, GitHub e Internet]_ </strong>
  - [x] 2.1 - Git & GitHub - O que é e para que serve
- - [ ] 2.2 - Git & GitHub - Entendendo os comandos
- - [ ] 2.3 - Internet - Entendendo como ela funciona
+ - [x] 2.2 - Git & GitHub - Entendendo os comandos
+ - [x] 2.3 - Internet - Entendendo como ela funciona
 
 * <strong> _[Bloco 03: Introdução à HTML e CSS]_ </strong> 
-- [ ] 3.1 - HTML & CSS - Estrutura de paginas
+- [x] 3.1 - HTML & CSS - Estrutura de paginas
 - [ ] 3.2 - HTML & CSS - Primeiros passos em CSS
 - [ ] 3.3 - HTML & CSS - Seletor e posicionamento
 - [ ] 3.4 - HTML Semântico
