@@ -1,0 +1,30 @@
+body{
+    font-size: 16px;
+    background-color: cadetblue;
+}
+h1{
+    font-family: sans-serif;
+    text-decoration: overline underline;
+}
+p{
+    font-weight: 600;
+    font-size: 3em;
+    font-style: italic;
+}
+ul{
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+}
+li{
+    margin-bottom: 8px;
+}
+#amarelo{
+    background-color: yellow;
+}
+#vermelho{
+    background-color: red;
+}
+#marrom{
+    background-color: brown;
+}
