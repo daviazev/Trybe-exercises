@@ -18,9 +18,9 @@
 
 * <strong> _[Bloco 03: Introdução à HTML e CSS]_ </strong> 
 - [x] 3.1 - HTML & CSS - Estrutura de paginas
-- [ ] 3.2 - HTML & CSS - Primeiros passos em CSS
-- [ ] 3.3 - HTML & CSS - Seletor e posicionamento
-- [ ] 3.4 - HTML Semântico
+- [x] 3.2 - HTML & CSS - Primeiros passos em CSS
+- [x] 3.3 - HTML & CSS - Seletor e posicionamento
+- [x] 3.4 - HTML Semântico
 - [ ] 3.5 - Projeto - Lesson Learned
  
 * <strong>Bloco 04: Introdução à JavaScript e Lógica de Programação</strong> 
