@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+img{
+    width: 100%;
+    margin-top: 16px;
+    border-radius: 8px;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: #49a3c2;
+}
+
+h1{
+    align-self: center;
+    text-align: center;
+    color: #ffffff;
+}
+
+aside{
+    padding: 48px 48px 0 ;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+.infos{
+    display: block;
+    color: #ffffff;
+    background-color: #59CD90;
+    text-align: center;
+    border: 2px solid #59CD90;
+    padding: 16px;
+    margin: 8px;
+    border-radius: 8px;
+}
+
+.infos:hover{
+    background-color: #ffffff;
+    color: #49a3c2;
+}
+
+h2{
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+    margin: 24px 24px 16px;
+}
+
+main{
+    text-align: justify;
+    /* background-color: #49a3c2; */
+    margin: 0 13px 0;
+    padding: 16px
+}
+
+/* .generalInfo{
+    text-align: justify;
+    background-color: #49a3c2;
+    margin: 0 13px 0;
+    padding: 16px
+} */
+
+/* tr{
+    text-align: center;
+    margin-top: 8px;
+}
+
+td{
+    padding: 10px;
+    margin-top: 8px;
+} */
+
+.scienclass{
+    margin-top: 16px;
+    text-align: center;
+}
+
+.references{
+    text-align: center;
+}
+
+.referencesLinks{
+    color: black;
+}
+
+.referencesLinks:hover{
+    color: #49a3c2;
+}
+
+.redesPai{
+    display: flex;
+    justify-content: center;
+}
+
+.redes{
+    margin: 8px 8px 8px 8px;
+    cursor: pointer;
+    width: 50px;
+    margin: 0px 8px 0;
+    padding-top: 12px;
+}
+
+.h3footer{
+    margin: 8px 24px 0;
+}
+
+.bonus{
+    text-align: center;
+}
+
+footer{
+    margin-top: 24px;
+    text-align: center;
+}
+
+.ano{
+    margin: 16px;
+}
+
+@media (min-width: 768px){
+    img{
+        
+        width: 100%;
+        margin-top: 16px;
+        border-radius: 8px;
+    }
+    
+    header{
+        height: 10vh;
+        background-color: #49a3c2;
+    }
+
+    h1{
+        align-self: center;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    aside{
+        background-color: #49a3c2;
+        position: sticky;
+        top: 200px;
+        right: 48px;
+        border: 2px solid;
+        border-radius: 8px;
+        width: 200px;
+        float: right;
+        margin-top: 24px;
+        padding: 24px;
+        box-sizing: border-box;
+    }
+
+    .infos{
+        background-color: #393E41;
+        border: 2px solid #393E41;
+    }
+
+    .infos:hover{
+        background-color: #ffffff;
+        border: 2px solid #49a3c2;
+        color: black;
+    }
+
+    .divmain{
+        display: flex;
+        justify-content: center;
+    }
+
+    main{
+        margin: auto;
+        text-align: justify;
+        width: 70%;
+    }
+
+    section{
+        margin: auto;
+    }
+
+    .references{
+        text-align: center;
+    }
+    
+}
