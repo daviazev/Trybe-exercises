@@ -56,7 +56,7 @@ function showAllFunctions() {
         changesP(),
         changesYellowBox(),
         chagesRedBox(),
-        changesH1("Exercício 5.1 - Javascriptonita"),
+        changesH1("Exercício 5.1 - Javaskriptonita"),
         changesPToUpperCase(),
         showAllP()
 }
