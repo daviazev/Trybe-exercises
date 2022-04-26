@@ -27,19 +27,19 @@
 - [x] 4.1 - Java Script - Primeiros passos
 - [x] 4.2 - Java Script - Array e loop For
 - [x] 4.3 - Java Script - Lógica de Programação e Algoritimos
-- [ ] 4.4 - Java Script - Objetos e funções
-- [ ] 4.5 - Projeto - Playground Functions
+- [x] 4.4 - Java Script - Objetos e funções
+- [x] 4.5 - Projeto - Playground Functions
 
 * <strong>Bloco 05: JavaScript: DOM, Eventos e Web Storage</strong> 
- - [ ] 5.1 - JavaScript - DOM e seletores
- - [ ] 5.2 - JavaScript -Trabalhando com elementos
- - [ ] 5.3 - JavaScript - Eventos
- - [ ] 5.4 - JavaScript - Web Storage
- - [ ] 5.5 - Fundamentos - JavaScript - Projetos
- - [ ] 5.5 - Projeto - Arte com Pixels
- - [ ] 5.6 - Projeto - Lista de Tarefas
+ - [x] 5.1 - JavaScript - DOM e seletores
+ - [x] 5.2 - JavaScript -Trabalhando com elementos
+ - [x] 5.3 - JavaScript - Eventos
+ - [x] 5.4 - JavaScript - Web Storage
+ - [x] 5.5 - Fundamentos - JavaScript - Projetos
+ - [x] 5.5 - Projeto - Arte com Pixels
+ - [x] 5.6 - Projeto - Lista de Tarefas
  - [ ] 5.7 - (Bônus) Projetos - Meme Generator
- - [ ] 5.8 - (Bônus) Projetos - Adivinha a Cor 
+ - [x] 5.8 - (Bônus) Projetos - Adivinha a Cor 
  - [ ] 5.8 - (Bônus) Projetos - Carta Misteriosa
 * <strong>Bloco 06: HTML e CSS: Forms, Flexbox e Responsivo</strong>
 - [ ] 6.1 - HTML & CSS - Forms
