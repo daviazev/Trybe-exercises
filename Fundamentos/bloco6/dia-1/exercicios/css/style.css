@@ -1,0 +1,61 @@
+/* * {
+  margin: 0;
+  padding: 0;
+} */
+h1,
+h3 {
+  text-align: center;
+}
+
+textarea {
+  padding: 8px;
+}
+
+p {
+  margin: auto;
+  text-align: center;
+}
+
+#form-content {
+  border: 3px solid black;
+  border-radius: 8px;
+  width: 500px;
+  height: 600px;
+  padding: 16px;
+  margin: auto;
+  background-color: #74ff9c;
+}
+
+#center {
+  text-align: center;
+}
+
+#radioInputs {
+  text-align: center;
+}
+
+#inputTextArea {
+  text-align: center;
+}
+
+#dateInput {
+  text-align: center;
+}
+
+.inputs {
+  margin: 8px auto;
+  padding: 8px;
+  width: 80%;
+  border-radius: 8px;
+}
+
+.concordes {
+  margin: 8px;
+}
+
+button {
+  margin: 40px 4px;
+  padding: 8px;
+  width: 100px;
+  border-radius: 8px;
+}

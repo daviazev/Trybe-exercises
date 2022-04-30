@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>
+      Isso ficou horrível, eu sei, mas me perdoe, só estava testanto os
+      diferentes tipos de input 😉
+    </h1>
+    <h2>Procura algum repositório meu aí, tem uns projetinhos legais 😁</h2>
+    <form action="" method="get" enctype="multipart/form-data">
+      <label for="input-text">Digite seu nome</label>
+      <input
+        type="text"
+        placeholder="Type text"
+        required
+        autocomplete="off"
+        id="
+      input-text"
+      />
+      <input
+        type="password"
+        name="password"
+        id="input-password"
+        placeholder="Type password"
+        required
+      />
+      <textarea
+        name="text-area"
+        id="text-area"
+        placeholder="escreva algo"
+        cols="40"
+        rows="10"
+        size="10"
+      >
+Texto escrito no arquivo HTML</textarea
+      >
+      <input type="checkbox" value="opala" name="carros" checked /> Opala
+      <input type="checkbox" value="golf" name="carros" /> Golf
+      <input type="checkbox" value="renegade" name="carros" /> Renegade
+      <input type="checkbox" value="rx7" name="carros" /> RX7
+      <!--  -->
+      <label for="state1">
+        <input type="radio" id="state1" name="state" value="sp" /> São Paulo
+      </label>
+      <label for="state2">
+        <input type="radio" id="state2" name="state" value="rj" /> Rio de
+        Janeiro
+      </label>
+      <label for="state3">
+        <input type="radio" id="state3" name="state" value="mg" /> Minas Gerais
+      </label>
+      <label for="state4">
+        <input type="radio" id="state4" name="state" value="ba" /> Bahia
+      </label>
+      <!--  -->
+      <select name="classe" id="dropdown-classe">
+        <option value="economica">Economica</option>
+        <option value="preferencial">Preferencial</option>
+        <option value="executiva">Executiva</option>
+        <option value="otoPatama">Oto Patamá</option>
+      </select>
+      <!--  -->
+      <input type="file" />
+      <!--  -->
+      <button type="submit">Enviar</button>
+      <button type="reset">Resetar</button>
+      <!--  -->
+      <input type="color" id="cor" />
+      <!--  -->
+      <input type="datetime-local" />
+      <!--  -->
+      <input type="month" />
+      <!--  -->
+      <input type="range" min="10" max="15" id="range" />
+      <!--  -->
+      <input type="search" placeholder="type search" />
+      <!--  -->
+      <input type="tel" placeholder="type tel" />
+      <!--  -->
+      <input type="time" />
+      <!--  -->
+      <input type="url" placeholder="type url" />
+      <!--  -->
+      <input type="week" />
+    </form>
+  </body>
+</html>
