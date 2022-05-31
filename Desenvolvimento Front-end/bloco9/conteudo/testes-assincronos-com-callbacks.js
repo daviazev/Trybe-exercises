@@ -1,0 +1,3 @@
+// Ao realizar testes assíncronos com callbacks, é necessário ter cuidado com falso-positivo (quando o teste deveria falhar mas acaba passando). Isso acontece pois o Jest não sabe, por padrão, quando é necessário esperar o término da execução de uma função assíncrona. Ou seja, você roda o teste, o Jest analisa as funções síncronas, não espera as assíncronas terminarem e, dado o final do teste, gera um resultado positivo antes de um eventual problema numa função assíncrona acusar um erro.
+
+// O exemplo abaixo gera um falso-positivo:
