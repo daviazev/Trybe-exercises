@@ -77,11 +77,11 @@
 
 - <strong>Bloco 09: JavaScript e Testes Assíncronos</strong>
 
-* [ ] 9.1 - Introdução - Front-End
-* [ ] 9.1 - Javascript Assíncrono e Callbacks
-* [ ] 9.2 - Javascript Assíncrono - Fetch API e async/await
-* [ ] 9.3 - Jest - Testes Assíncronos
-* [ ] 9.4 - Projeto - Carrinho de compras
+* [x] 9.1 - Introdução - Front-End
+* [x] 9.1 - Javascript Assíncrono e Callbacks
+* [x] 9.2 - Javascript Assíncrono - Fetch API e async/await
+* [x] 9.3 - Jest - Testes Assíncronos
+* [x] 9.4 - Projeto - Carrinho de compras
 
 - <strong>Bloco 10: Introdução à React</strong>
 
