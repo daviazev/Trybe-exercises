@@ -1,0 +1,1 @@
+Os exercícios do dia 9.3 foram feitos no repositório [exercise-magic-card](https://github.com/daviazev/exercise-magic-card)
