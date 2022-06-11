@@ -85,8 +85,8 @@
 
 - <strong>Bloco 10: Introdução à React</strong>
 
-* [ ] 10.1 - Introdução - React
-* [ ] 10.1 - "Hello World!" no React
+* [x] 10.1 - Introdução - React
+* [x] 10.1 - "Hello World!" no React
 * [ ] 10.2 - Componentes React
 * [ ] 10.3 - Projeto - Sistema Solar
 
@@ -213,7 +213,7 @@
 * [ ] 27.2 - Herança e Interfaces
 * [ ] 27.3 - Polimorfismo
 * [ ] 27.4 - SOLID - Introdução e Princípios S, O e D
-* [ ] 27.5 - SOLID - Princípios L e I 
+* [ ] 27.5 - SOLID - Princípios L e I
 * [ ] 27.6 - Projeto - Trybers and Dragons
 
 - <strong> Bloco 28: Projeto - TFC - Trybe Futebol Clube </strong>
