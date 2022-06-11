@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: blueviolet;
+  color: white;
+  text-align: center;
+  padding: 16px;
+}
+
+.div {
+  background-color: aqua;
+  padding: 16px;
+  border-radius: 8px;
+  width: 25%;
+  margin: 8px;
+}
+
+.Div-father {
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  text-align: center;
+  padding: 16px;
+  background-color: cadetblue;
+  color: white;
+}
