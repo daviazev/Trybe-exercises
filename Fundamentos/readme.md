@@ -4,7 +4,7 @@
     No primeiro módulo, aprendemos conceitos básicos de programação. Desde HTML Semântico à Jest e Higher Order Functions.  
 </p>
 
-<p>Confira abaixo os projetos desenvolvidos durante todo o módulo de Fundamentos! 🤓</p>
+<p>Confira abaixo alguns dos projetos desenvolvidos durante o módulo de Fundamentos! 🤓</p>
 
 ### Lessons Learned
 
