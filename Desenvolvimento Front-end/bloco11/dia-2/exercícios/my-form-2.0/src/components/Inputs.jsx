@@ -2,16 +2,26 @@ import React, { Component } from 'react';
 
 class Input extends Component {
   render() {
-    const { handleChange, name, type, placeholder, maxLength, value } =
-      this.props;
+    const {
+      verifyIfStartsWithNumber,
+      handleChange,
+      name,
+      type,
+      placeholder,
+      maxLength,
+      value,
+    } = this.props;
+    // console.log(name);
     return (
       <input
-        value={name}
-        onClick={handleChange}
+        onBlur={verifyIfStartsWithNumber}
+        value={value}
+        onChange={handleChange}
         name={name}
         type={type}
         placeholder={placeholder}
         maxLength={maxLength}
+        required
       />
     );
   }

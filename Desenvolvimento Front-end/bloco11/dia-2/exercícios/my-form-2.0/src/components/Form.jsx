@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import Input from './Inputs';
+import Select from './Select';
 
 class Form extends Component {
   constructor() {
     super();
 
     this.state = {
+      haveShowAnAlert: true,
       name: '',
       email: '',
       cpf: '',
@@ -13,11 +15,15 @@ class Form extends Component {
       cidade: '',
       estado: '',
       moradia: '',
+      resumoCurriculo: '',
+      cargo: '',
     };
   }
 
   send = (event) => {
     event.preventDefault();
+    // <Input type='text' placeholder='deuiwiuw' />;
+    return <div>div criada no clique do botao</div>;
   };
 
   removeSpecialCharacter = (value) => {
@@ -25,7 +31,6 @@ class Form extends Component {
     this.setState({
       endereco: teste,
     });
-    console.log(value);
   };
 
   handleChange = ({ target }) => {
@@ -42,9 +47,22 @@ class Form extends Component {
 
   verifyIfStartsWithNumber = () => {
     const { cidade } = this.state;
-    if (typeof parseInt(cidade[0]) === 'number') {
+    const isInt = Array.from(cidade[0]);
+    const toInt = parseInt(isInt);
+
+    if (!isNaN(toInt)) {
       this.setState({
         cidade: cidade.substring(1),
+      });
+    }
+  };
+
+  showAlert = () => {
+    const { haveShowAnAlert } = this.state;
+    if (haveShowAnAlert === true) {
+      console.log('Preencha esta informação com cuidado');
+      this.setState({
+        haveShowAnAlert: false,
       });
     }
   };
@@ -62,70 +80,73 @@ class Form extends Component {
               value={name}
               name='name'
               type='text'
-              placeholder='um input muito louco'
-              maxLength='5'
-            />
-            {/* <input
-              value={name.toUpperCase()}
-              onChange={this.handleChange}
-              name='name'
-              type='text'
               placeholder='Digite seu nome'
               maxLength='40'
-              required
-            /> */}
-            <input
+            />
+            <Input
+              handleChange={this.handleChange}
               value={email}
-              onChange={this.handleChange}
               name='email'
               type='email'
               placeholder='Email'
               maxLength='50'
-              required
             />
-            <input
+            <Input
+              handleChange={this.handleChange}
               value={cpf}
-              onChange={this.handleChange}
               name='cpf'
-              type='number'
-              placeholder='CPF'
-              required
+              type='text'
+              placeholder='CPF (somente números)'
+              maxLength='11'
             />
-            <input
+            <Input
+              handleChange={this.handleChange}
               value={endereco}
-              onChange={this.handleChange}
               name='endereco'
               type='text'
               placeholder='Endereço'
               maxLength='200'
-              required
             />
-            <input
+            <Input
+              handleChange={this.handleChange}
+              verifyIfStartsWithNumber={this.verifyIfStartsWithNumber}
               value={cidade}
-              onChange={this.handleChange}
-              onBlur={this.verifyIfStartsWithNumber}
               name='cidade'
               type='text'
               placeholder='Cidade'
               maxLength='28'
-              required
             />
-            <select name={estado} id='estado' required>
-              <option>São Paulo</option>
-              <option>Rio de Janeiro</option>
-              <option>Bahia</option>
-              <option>Minas Gerais</option>
-              <option>Maranhão</option>
-              <option>Acre</option>
-              <option>Paraná</option>
-            </select>
+            <Select
+              name='estado'
+              id='estado'
+              value={estado}
+              handleChange={this.handleChange}
+            />
             <div value={moradia} onChange={this.handleChange}>
               <input type='radio' value='casa' name='moradia' /> Casa
               <input type='radio' value='apartamento' name='moradia' />{' '}
               Apartamento
             </div>
-            <button onClick={this.send}>Enviar</button>
           </fieldset>
+          <fieldset>
+            <legend>Dados do meu último emprego</legend>
+            <h3>Resumo do currículo</h3>
+            <textarea
+              onChange={this.handleChange}
+              name='resumoCurriculo'
+              maxLength='1000'
+              placeholder='Escreva seu resumo'
+            ></textarea>
+            <h3>Cargo</h3>
+            <textarea
+              onChange={this.handleChange}
+              name='cargo'
+              maxLength='40'
+              placeholder='Descreva seu cargo'
+              onMouseEnter={this.showAlert}
+            ></textarea>
+          </fieldset>
+          <button onClick={this.send}>Enviar</button>
         </form>
       </div>
     );
