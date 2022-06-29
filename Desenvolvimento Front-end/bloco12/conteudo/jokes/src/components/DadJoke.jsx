@@ -6,6 +6,8 @@ class DadJoke extends React.Component {
 
     this.saveJoke = this.saveJoke.bind(this);
 
+    console.log('constructor');
+
     this.state = {
       jokeObj: undefined,
       loading: true,
@@ -23,7 +25,16 @@ class DadJoke extends React.Component {
   }
 
   componentDidMount() {
+    console.log('componentDidMount');
     this.fetchJoke();
+  }
+
+  componentDidUpdate() {
+    console.log('componentDidUpdate');
+  }
+
+  componentWillUnmount() {
+    console.log('componentWillUnmount');
   }
 
   saveJoke() {
@@ -31,11 +42,13 @@ class DadJoke extends React.Component {
   }
 
   render() {
+    console.log('render');
     const { storedJokes } = this.state;
     const loadingElement = <span>Loading...</span>;
 
     return (
       <div>
+        <h1>Teste</h1>
         <span>
           {storedJokes.map(({ id, joke }) => (<p key={id}>{joke}</p>))}
         </span>
