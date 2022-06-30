@@ -1,0 +1,1 @@
+Os exercícios de hoje foram feitos no repositório [exercise-dog-image](https://github.com/daviazev/exercise-dog-image)
