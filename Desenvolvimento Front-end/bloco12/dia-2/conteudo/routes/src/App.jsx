@@ -14,7 +14,7 @@ function App() {
       <Route exact path="/about" component={About} />
       <Route path="/about/me"><AboutMe /></Route>
       <Route path="/contacts" component={Contacts} />
-      <Route path="/profile"><Profile /></Route>
+      <Route path="/profile/:ship" render={(props) => <Profile { ...props } name="Davi" />} />
       <Route exact path="/" component={Home} />
     </BrowserRouter>
   )
