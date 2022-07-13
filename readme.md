@@ -87,29 +87,29 @@
 
 * [x] 10.1 - Introdução - React
 * [x] 10.1 - "Hello World!" no React
-* [ ] 10.2 - Componentes React
-* [ ] 10.3 - Projeto - Sistema Solar
+* [x] 10.2 - Componentes React
+* [x] 10.3 - Projeto - Sistema Solar
 
 - <strong> Bloco 11: Componentes com Estado, Eventos e Formulários com React</strong>
 
-* [ ] 11.1 - Componentes com estado e eventos
-* [ ] 11.2 - Formulários no React
-* [ ] 11.3 - Projeto - Tryunfo
+* [x] 11.1 - Componentes com estado e eventos
+* [x] 11.2 - Formulários no React
+* [x] 11.3 - Projeto - Tryunfo
 
 - <strong> Bloco 12: Ciclo de Vida de Componentes e React Router </strong>
 
-* [ ] 12.1 - Ciclo de vida de componentes
-* [ ] 12.2 - React Router
-* [ ] 12.3 - Projeto - TrybeTunes
+* [x] 12.1 - Ciclo de vida de componentes
+* [x] 12.2 - React Router
+* [x] 12.3 - Projeto - TrybeTunes
 
 - <strong> Bloco 13: Metodologias Ágeis </strong>
 
-* [ ] 13.1 - Metodologias Ágeis
-* [ ] 13.2 - Projeto - Fronted Online Stone
+* [x] 13.1 - Metodologias Ágeis
+* [x] 13.2 - Projeto - Fronted Online Stone
 
 - <strong> Bloco 14: Testes automatizados com React Testing Library </strong>
 
-* [ ] 14.1 - RTL - Primeiros passos
+* [x] 14.1 - RTL - Primeiros passos
 * [ ] 14.2 - RTL - Mocks e Inputs
 * [ ] 14.3 - RTL - Testando React Router
 * [ ] 14.4 - Projeto - Teste em React
