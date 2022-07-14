@@ -1,3 +1,7 @@
+const math = require('./math');
+jest.mock('../services/math');
+// const mockFn = jest.fn();
+
 let retornaNumeroAleatorio = () => Math.floor(Math.random() * 100);
 
 let divisivelPorDois = () => retornaNumeroAleatorio() % 2 === 0;
@@ -55,5 +59,20 @@ describe('testa a função divisivelPorDois', () => {
 
     expect(divisivelPorDois()).toBe('default value');
     expect(divisivelPorDois).toBeCalledTimes(5);
+  });
+});
+
+describe('funções do arquivo math', () => {
+  // as funções estão sendo importadas e mockadas nas primeiras linhas deste arquivo
+  // Aqui testamos se função foi chamada, quantas vezes foi chamada, quais parâmetros foram usados e qual seu retorno
+
+  test('função de somar mockada', () => {
+    math.somar.mockImplementation((a, b) => a + b);
+    math.somar(1, 2);
+
+    expect(math.somar).toBeCalled();
+    expect(math.somar).toBeCalledTimes(1);
+    expect(math.somar).toBeCalledWith(1, 2);
+    expect(math.somar(1000, 998)).toBe(1998);
   });
 });
