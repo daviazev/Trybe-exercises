@@ -9,7 +9,6 @@ test('#somar', () => {
   expect(mockSomar).toHaveBeenCalled();
   expect(mockSomar).toHaveBeenCalledTimes(1);
   expect(mockSomar).toHaveBeenCalledWith(1, 2);
-  //   expect(mockSomar(1, 2)).resolves.toBe(4);
 
   //   expect(math.somar(1, 2)).resolves.toBe(3);
 });
