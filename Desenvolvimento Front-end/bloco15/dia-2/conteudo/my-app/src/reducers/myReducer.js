@@ -1,5 +1,5 @@
 const INITIAL_STATE = {
-  state: '',
+  state: ['bla', 'bla'],
 };
 
 const myReducer = (state = INITIAL_STATE, action) => {

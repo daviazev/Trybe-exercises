@@ -7,9 +7,10 @@
 // export default store;
 
 import { createStore, combineReducers } from 'redux';
-import listReducer from '../reducers';
+import listReducer from '../reducers/index';
+import myReducer from '../reducers/myReducer';
 
-const rootReducer = combineReducers({ listReducer });
+const rootReducer = combineReducers({ listReducer, myReducer });
 
 const store = createStore(rootReducer);
 
