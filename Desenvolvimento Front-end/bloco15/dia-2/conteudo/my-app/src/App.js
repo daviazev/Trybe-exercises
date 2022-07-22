@@ -7,7 +7,7 @@ import './App.css';
 function App() {
   return (
     <div className='App'>
-      <FirstComponent />
+      {/* <FirstComponent /> */}
       <SecondComponent />
       <img src={logo} alt='react-logo' />
     </div>

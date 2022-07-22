@@ -1,19 +1,21 @@
-// import { combineReducers } from 'redux';
-// import myReducer from './myReducer';
+// reducers/index.js
 
-// const rootReducer = combineReducers({ myReducer });
+import { combineReducers } from 'redux';
+import myReducer from './myReducer';
 
-// export default rootReducer;
+const rootReducer = combineReducers({ myReducer });
 
-const INITIAL_STATE = [];
+export default rootReducer;
 
-const listReducer = (state = INITIAL_STATE, action) => {
-  switch (action.type) {
-    case 'ADD_ELEMENT':
-      return [...state, action.value];
-    default:
-      return state;
-  }
-};
+// const INITIAL_STATE = [];
 
-export default listReducer;
+// const listReducer = (state = INITIAL_STATE, action) => {
+//   switch (action.type) {
+//     case 'ADD_ELEMENT':
+//       return [...state, action.value];
+//     default:
+//       return state;
+//   }
+// };
+
+// export default listReducer;

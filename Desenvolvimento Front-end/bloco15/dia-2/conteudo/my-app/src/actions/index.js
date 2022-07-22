@@ -1,7 +1,7 @@
-// const newAction = (state) => ({ type: 'NEW_ACTION', state });
+//actions.js
 
-// export default newAction;
+export const newAction = (state) => ({ type: 'NEW_ACTION', state });
 
-const addAssignment = (value) => ({ type: 'ADD_ELEMENT', value });
+// const addAssignment = (value) => ({ type: 'ADD_ELEMENT', value });
 
-export default addAssignment;
+// export default addAssignment;
