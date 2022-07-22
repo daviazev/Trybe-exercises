@@ -1,15 +1,13 @@
-import logo from './logo.svg';
-import FirstComponent from './components/FirstComponent';
-import SecondComponent from './components/SecondComponent';
-// import myReducer from './reducers/myReducer';
-import './App.css';
+// src/App.js
+import React from 'react';
+import InputsList from './InputsList';
+import List from './List';
 
 function App() {
   return (
-    <div className='App'>
-      {/* <FirstComponent /> */}
-      <SecondComponent />
-      <img src={logo} alt='react-logo' />
+    <div>
+      <InputsList />
+      <List />
     </div>
   );
 }
