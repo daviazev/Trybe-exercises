@@ -110,15 +110,15 @@
 - <strong> Bloco 14: Testes automatizados com React Testing Library </strong>
 
 * [x] 14.1 - RTL - Primeiros passos
-* [ ] 14.2 - RTL - Mocks e Inputs
-* [ ] 14.3 - RTL - Testando React Router
-* [ ] 14.4 - Projeto - Teste em React
+* [x] 14.2 - RTL - Mocks e Inputs
+* [x] 14.3 - RTL - Testando React Router
+* [x] 14.4 - Projeto - Teste em React
 
 - <strong> Bloco 15: Gerenciamento de estado com Redux </strong>
 
-* [ ] 15.1 - Introdução ao Redux - O estado global da aplicação
-* [ ] 15.2 - Usando o Redux no React
-* [ ] 15.3 - Usando o Redux no React - Prática
+* [x] 15.1 - Introdução ao Redux - O estado global da aplicação
+* [x] 15.2 - Usando o Redux no React
+* [x] 15.3 - Usando o Redux no React - Prática
 * [ ] 15.4 - Usando o Redux no React - Actions Assincronas
 * [ ] 15.5 - Testes em React-Redux
 * [ ] 15.6 - Projeto - Trybe Wallet
