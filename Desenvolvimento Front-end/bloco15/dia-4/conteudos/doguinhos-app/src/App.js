@@ -4,9 +4,6 @@ import { connect } from 'react-redux';
 import { fetchDog } from './store';
 
 function App({ isFetching, src, fetchDog }) {
-  console.log(isFetching);
-  console.log(src);
-  console.log(fetchDog);
   return isFetching ? (
     <p>Loading</p>
   ) : (
