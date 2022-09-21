@@ -101,3 +101,83 @@ SELECT district, COUNT(address) AS address_by_district
 FROM sakila.address
 GROUP BY district
 ORDER BY address_by_district DESC;
+
+/*
+	Filtrando Resultados do GROUP BY com HAVING
+
+	Podemos usar o HAVING para filtrar resultados agrupados, assim como usamos 
+	o SELECT...WHERE para filtrar resultados individuais.
+
+	A query a seguir busca o nome e a quantidade de nomes cadastrados na tabela 
+	sakila.actor e os agrupa por quantidade. Por fim, filtramos os resultados 
+	agrupados usando o HAVING, para que somente os nomes que estão cadastrados 
+	mais de duas vezes sejam exibidos.
+
+	O HAVING acontece por último na execução da consulta, de modo que primeiro 
+	são calculados os agrupamentos, e apenas depois disso são filtrados os que 
+	não satisfazem as condições da cláusula HAVING
+
+	Em uma aplicação real de troca de mensagens, por exemplo, pode ser preciso 
+	identificar as pessoas que utilizam o sistema e enviaram mais de 1000 
+	mensagens por hora, caracterizando o SPAM de acordo com a regra de negócio
+	da empresa. Assim, o HAVING te permitirá fazer essa consulta filtrando 
+	esse dado que foi agrupado com o uso do COUNT.
+*/
+
+SELECT first_name, COUNT(*)
+FROM sakila.actor
+GROUP BY first_name
+HAVING COUNT(*) > 2;
+
+-- Ou, melhor ainda, usando o AS para dar nomes às colunas de agregação,
+-- melhorando a leitura do resultado
+SELECT first_name, COUNT(*) AS nomes_cadastrados
+FROM sakila.actor
+GROUP BY first_name
+HAVING nomes_cadastrados > 2;
+
+-- Observação: o alias não funciona com strings para o HAVING,
+-- então use o underline ("_") para separar palavras
+-- Ou seja, o exemplo abaixo não vai funcionar
+SELECT first_name, COUNT(*) AS 'nomes cadastrados'
+FROM sakila.actor
+GROUP BY first_name
+HAVING 'nomes cadastrados' > 2;
+
+-- É importante entender que, quando usamos o HAVING, estamos filtrando 
+-- somente os resultados gerados após o GROUP BY ter sido executado.
+
+-- Para fixar
+
+/*
+	Usando a query a seguir, modifique-a de forma que exiba apenas as durações 
+	médias que estão entre 115.0 a 121.50. Além disso, dê um alias (apelido) 
+	à coluna gerada por AVG(length), de forma que deixe a query mais legível. 
+	Finalize ordenando os resultados de forma decrescente.
+    
+    SELECT rating, AVG(length)
+	FROM sakila.film
+	GROUP BY rating;
+*/
+
+SELECT rating, AVG(length) AS duracao_media
+FROM sakila.film
+GROUP BY rating
+HAVING duracao_media BETWEEN 115.5 AND 121.50
+ORDER BY duracao_media DESC;
+
+/*
+	Usando a query a seguir, exiba apenas os valores de total do custo de substituição 
+	que estão acima de $3950.50. Dê um alias que faça sentido para SUM(replacement_cost),
+	de forma que deixe a query mais legível. Finalize ordenando os resultados de forma crescente.
+
+	SELECT rating, SUM(replacement_cost)
+	FROM sakila.film
+	GROUP by rating;
+*/
+
+SELECT rating, SUM(replacement_cost) AS custo_de_substituicao
+FROM sakila.film
+GROUP by rating
+HAVING custo_de_substituicao > 3950.50
+ORDER BY custo_de_substituicao;
