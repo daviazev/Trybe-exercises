@@ -1,0 +1,9 @@
+Para iniciar a organização de um banco de dados, devemos nos atentar para a Primeira Forma Normal - base de todas as outras. Seus preceitos são:
+
+Colunas devem possuir apenas um valor;
+Valores em uma coluna devem ser do mesmo tipo de dados;
+Cada coluna deve possuir um nome único;
+A ordem dos dados registrados em uma tabela não deve afetar a integridade dos dados.
+
+Vamos descobrir se as estruturas que criamos estão dentro da Primeira Forma Normal? Veja o vídeo a seguir:
+
