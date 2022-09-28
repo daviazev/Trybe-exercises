@@ -1,0 +1,1 @@
+Esse texto foi escrito pelo arquivo writeFile.js! QUE DEMAAAAAAAAAAAAAAAAAAIS! EU AMO BACKEND!
