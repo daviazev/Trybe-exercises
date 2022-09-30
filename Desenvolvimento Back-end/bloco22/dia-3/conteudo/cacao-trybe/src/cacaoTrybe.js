@@ -17,17 +17,6 @@ const getAllChocolates = async () => {
   return cacaoTrybe.chocolates;
 };
 
-// const getBrandById = async (id) => {
-//   const { brands } = await readCacaoTrybeFile();
-//   const brandObj = brands.find((obj) => obj.id === id);
-//   return brandObj;
-// };
-
-// const getChocolateById = async (id) => {
-//   const cacaoTrybe = await readCacaoTrybeFile();
-//   return cacaoTrybe.chocolates.filter((chocolate) => chocolate.id === id);
-// };
-
 const getChocolateById = async (id) => {
   const { chocolates } = await readCacaoTrybeFile();
   return chocolates.filter((obj) => obj.id === id);
