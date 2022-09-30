@@ -1,5 +1,5 @@
 const fs = require('fs').promises;
-const { join, dirname } = require('path');
+const { join } = require('path');
 
 const readCacaoTrybeFIle = async () => {
   const path = '/files/cacaoTrybeFile.json';
