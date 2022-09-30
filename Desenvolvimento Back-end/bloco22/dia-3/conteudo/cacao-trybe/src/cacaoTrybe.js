@@ -1,7 +1,7 @@
 const fs = require('fs').promises;
 const { join } = require('path');
 
-const readCacaoTrybeFIle = async () => {
+const readCacaoTrybeFile = async () => {
   const path = '/files/cacaoTrybeFile.json';
 
   try {
@@ -13,8 +13,29 @@ const readCacaoTrybeFIle = async () => {
 };
 
 const getAllChocolates = async () => {
-  cacaoTrybe = await readCacaoTrybeFIle();
+  cacaoTrybe = await readCacaoTrybeFile();
   return cacaoTrybe.chocolates;
 };
 
-module.exports = { getAllChocolates };
+// const getBrandById = async (id) => {
+//   const { brands } = await readCacaoTrybeFile();
+//   const brandObj = brands.find((obj) => obj.id === id);
+//   return brandObj;
+// };
+
+// const getChocolateById = async (id) => {
+//   const cacaoTrybe = await readCacaoTrybeFile();
+//   return cacaoTrybe.chocolates.filter((chocolate) => chocolate.id === id);
+// };
+
+const getChocolateById = async (id) => {
+  const { chocolates } = await readCacaoTrybeFile();
+  return chocolates.filter((obj) => obj.id === id);
+};
+
+const getChocolatesByBrand = async (brandId) => {
+  const { chocolates } = await readCacaoTrybeFile();
+  return chocolates.filter((chocolate) => chocolate.brandId === brandId);
+};
+
+module.exports = { getAllChocolates, getChocolateById, getChocolatesByBrand };
