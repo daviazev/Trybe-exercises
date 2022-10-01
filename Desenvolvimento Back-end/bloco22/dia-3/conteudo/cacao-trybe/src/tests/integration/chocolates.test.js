@@ -68,6 +68,7 @@ describe('Testando a API Cacao Trybe', function () {
   describe('Usando o método GET em /chocolates', function () {
     it('Retorna a lista completa de chocolates', async function () {
       const response = await chai.request(app).get('/chocolates');
+      // console.log('responseee', response.body.chocolates.length);
       expect(response.status).to.be.equal(200);
       expect(response.body.chocolates).to.deep.equal(output);
     });
@@ -105,6 +106,22 @@ describe('Testando a API Cacao Trybe', function () {
           brandId: 1,
         },
       ]);
+    });
+  });
+
+  // OS CÓDIGOS FEITOS A PARTIR DAQUI FAZEM PARTE DOS EXERCÍCIOS DO DIA 22.3
+
+  //   1 - Crie os testes de integração para o endpoint GET /chocolates/total
+
+  // Crie um caso para o código retornado
+  // Crie outro caso para o retorno esperado
+
+  describe('Usando o método GET em /chocolates/total', function () {
+    it('Retorna a quantidade correta de chocolates, que são 4', async function () {
+      const response = await chai.request(app).get('/chocolates/total');
+      console.log('xablau aqui', response.body);
+      expect(response.status).to.be.equal(200);
+      expect(response.body).to.deep.equal({ total: 4 });
     });
   });
 });
