@@ -1,28 +1,16 @@
 const express = require('express');
+const validateTeam = require('./middlewares/validateTeam');
+const existingId = require('./middlewares/existingId');
+
+const teams = require('./data/teams');
 
 const app = express();
 
 let nextId = 3;
-const teams = [
-  { id: 1, nome: 'São Paulo Futebol Clube', sigla: 'SPF' },
-  { id: 2, nome: 'Sociedade Esportiva Palmeiras', sigla: 'PAL' },
-];
 
 app.use(express.json());
 
 app.get('/teams', (req, res) => res.json(teams));
-
-const existingId = (req, res, next) => {
-  const { id } = req.params;
-
-  if (teams.some((team) => team.id === Number(id))) {
-    next();
-  } else {
-    res
-      .status(404)
-      .json({ error: 'o id não corresponde a nenhum clube da base de dados' });
-  }
-};
 
 // refatorado, agora a validação fica no middleware existingId
 app.get('/teams/:id', existingId, (req, res) => {
@@ -30,19 +18,6 @@ app.get('/teams/:id', existingId, (req, res) => {
   const team = teams.find((t) => t.id === id);
   res.json(team);
 });
-
-const validateTeam = (req, res, next) => {
-  const requiredProperties = ['nome', 'sigla'];
-
-  // ele só entratá no if se o objeto da requisição tiver cada propriedade
-  // que pode ser encontrada em requiredProperties logo acima :)
-
-  if (requiredProperties.every((property) => property in req.body)) {
-    next(); // Chama o próximo middleware
-  } else {
-    res.sendStatus(400); // Ou já responde avisando que deu errado
-  }
-};
 
 // Arranja os middlewares para chamar validateTeam primeiro
 app.post('/teams', validateTeam, (req, res) => {
