@@ -12,7 +12,7 @@ app.use(express.json());
 
 app.get('/teams', (req, res) => res.json(teams));
 
-const validateById = (req, res, next) => {
+const existingId = (req, res, next) => {
   const { id } = req.params;
 
   if (teams.some((team) => team.id === Number(id))) {
@@ -24,8 +24,8 @@ const validateById = (req, res, next) => {
   }
 };
 
-// refatorado, agora a validação fica no middleware validateById
-app.get('/teams/:id', validateById, (req, res) => {
+// refatorado, agora a validação fica no middleware existingId
+app.get('/teams/:id', existingId, (req, res) => {
   const id = Number(req.params.id);
   const team = teams.find((t) => t.id === id);
   res.json(team);
@@ -52,8 +52,8 @@ app.post('/teams', validateTeam, (req, res) => {
   res.status(201).json(team);
 });
 
-// refatorado, agora a validação fica no middleware validateById
-app.put('/teams/:id', validateById, (req, res) => {
+// refatorado, agora a validação fica no middleware existingId
+app.put('/teams/:id', existingId, (req, res) => {
   const id = Number(req.params.id);
   const team = teams.find((team) => team.id === id);
   const index = teams.indexOf(team);
@@ -62,8 +62,8 @@ app.put('/teams/:id', validateById, (req, res) => {
   res.status(201).json(updated);
 });
 
-// refatorado, agora a validação fica no middleware validateById
-app.delete('/teams/:id', validateById, (req, res) => {
+// refatorado, agora a validação fica no middleware existingId
+app.delete('/teams/:id', existingId, (req, res) => {
   const id = Number(req.params.id);
   const team = teams.find((t) => t.id === id);
   const index = teams.indexOf(team);
@@ -77,5 +77,8 @@ app.delete('/teams/:id', validateById, (req, res) => {
 // na rota GET /teams/:id existe no objeto teams. Refatore essa rota para usar o middleware.
 
 // 🚀 Reaproveite esse middleware e refatore as rotas PUT /teams/:id e DELETE /teams/:id para usarem ele também.
+
+// 🚀 Mova o middleware validateTeam para o arquivo src/middlewares/validateTeam.js,
+// mas continue usando o middleware nas rotas POST /teams e PUT /teams/:id.
 
 module.exports = app;
