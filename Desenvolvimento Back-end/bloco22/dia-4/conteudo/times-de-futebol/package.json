@@ -1,0 +1,20 @@
+{
+  "name": "times-de-futebol",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.17"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
