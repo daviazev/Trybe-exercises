@@ -1,10 +1,13 @@
 const express = require('express');
 const validateTeam = require('./middlewares/validateTeam');
 const existingId = require('./middlewares/existingId');
+const morgan = require('morgan');
 
 const teams = require('./data/teams');
 require('express-async-errors'); // esse carinha é importante kkkkkkkkk
 const app = express();
+app.use(morgan('dev'));
+
 const apiCredentials = require('./middlewares/apiCredentials');
 
 let nextId = 3;
@@ -55,6 +58,19 @@ app.delete('/teams/:id', existingId, (req, res) => {
   teams.splice(index, 1);
   res.sendStatus(200);
 });
+
+app.use((req, _res, next) => {
+  console.log('req.method:', req.method);
+  console.log('req.path:', req.path);
+  console.log('req.params:', req.params);
+  console.log('req.query:', req.query);
+  console.log('req.headers:', req.headers);
+  console.log('req.body:', req.body);
+  next();
+});
+
+// se ninguém respondeu, vai cair neste middleware
+app.use((req, res) => res.sendStatus(404));
 
 // PARA FIXAR
 
