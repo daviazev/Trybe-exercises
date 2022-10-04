@@ -1,5 +1,7 @@
 const fs = require('fs/promises');
 
+const teams = require('../data/teams');
+
 // como vamos ler arquivos assincronamente, precisamos do async
 async function apiCredentials(req, res, next) {
   // pega o token do cabeçalho, se houver
@@ -10,6 +12,7 @@ async function apiCredentials(req, res, next) {
   const authorized = JSON.parse(authdata);
 
   if (token in authorized) {
+    req.teams = authorized[token];
     next(); // pode continuar
   } else {
     res.sendStatus(401); // não autorizado

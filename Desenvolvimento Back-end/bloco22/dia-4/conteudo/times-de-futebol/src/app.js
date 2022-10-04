@@ -3,7 +3,7 @@ const validateTeam = require('./middlewares/validateTeam');
 const existingId = require('./middlewares/existingId');
 
 const teams = require('./data/teams');
-
+require('express-async-errors'); // esse carinha é importante kkkkkkkkk
 const app = express();
 const apiCredentials = require('./middlewares/apiCredentials');
 
@@ -23,6 +23,14 @@ app.get('/teams/:id', existingId, (req, res) => {
 
 // Arranja os middlewares para chamar validateTeam primeiro
 app.post('/teams', validateTeam, (req, res) => {
+  if (
+    // confere se a sigla proposta está inclusa nos times autorizados
+    !req.teams.teams.includes(req.body.sigla) &&
+    // confere se já não existe um time com essa sigla
+    teams.every((t) => t.sigla !== req.body.sigla)
+  ) {
+    return res.sendStatus(401);
+  }
   const team = { id: nextId, ...req.body };
   teams.push(team);
   nextId += 1;
