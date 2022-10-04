@@ -1,4 +1,4 @@
-// CÓDIGO COMENTADO PORQUE FOI PASSADO TUDO PARA ROTAS 
+// CÓDIGO COMENTADO PORQUE FOI PASSADO TUDO PARA ROTAS
 // E PORQUE EU NÃO QUIS EXCLUIR, PRA CASO EU PRECISE REVER
 
 /*
@@ -116,7 +116,9 @@ app.use((err, _req, _res, next) => {
 });
 
 app.use((err, _req, res, _next) => {
-  res.status(500).json({ message: `Algo deu errado! Mensagem: ${err.message}` });
+  res
+    .status(500)
+    .json({ message: `Algo deu errado! Mensagem: ${err.message}` });
 });
 
 module.exports = app;
