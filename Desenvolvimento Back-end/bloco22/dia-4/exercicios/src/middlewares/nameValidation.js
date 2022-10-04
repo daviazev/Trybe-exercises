@@ -26,7 +26,7 @@ const nameValidation = (req, res, next) => {
 
   if (!name) {
     res.status(400).json({ message: 'O campo name é obrigatório' });
-  } else if (name.length <= 4) {
+  } else if (name.length < 4) {
     res
       .status(400)
       .json({ message: 'O campo name deve ter pelo menos 4 caracteres' });
