@@ -1,0 +1,4 @@
+Você pode remover os containers exemplificados acima usando o comando docker rm <nome-do-container>.
+
+📝 Anote ai: um container só pode ser removido com o comando 
+docker rm <nome-do-container> se ele estiver parado ou tiver sua execução terminada**.

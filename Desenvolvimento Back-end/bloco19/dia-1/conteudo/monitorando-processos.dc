@@ -1,0 +1,15 @@
+Monitorando os processos dentro de um container
+O comando docker top, assim como nos terminais Linux, 
+traz as informações sobre os processos que estão sendo 
+rodados dentro do container, o que não inclui, por exemplo, 
+serviços que são compartilhados com o sistema hospedeiro.
+
+O comando a seguir é útil para quando estamos os rodando em segundo plano:
+
+gabriel@trybe:~$ docker container run -d --rm --name meu-container alpine:3.14 sleep 300
+6942640dda0e7d5e3db3fb122ab2e6c77f0d4bcf75b8c1082143cedf8215a193
+gabriel@trybe:~$ docker top meu-container
+UID      PID     PPID     C     STIME     TTY   TIME       CMD
+root     5299    5278     0     09:35     ?     00:00:00   sleep 300
+gabriel@trybe:~$ docker stop -t 0 meu-container
+meu-container

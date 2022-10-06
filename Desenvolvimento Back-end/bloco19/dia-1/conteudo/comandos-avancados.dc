@@ -1,0 +1,31 @@
+Comandos avançados no Docker
+
+Acessando o terminal do container
+
+O Docker nos permite executar um comando dentro um container 
+que já está em execução, isso é muito útil, pois nos ajuda 
+a encontrar problemas durante a execução dos nossos projetos.
+
+Nós vamos utilizá-lo para executar o programa sh,
+que nos permite simular um acesso de terminal dentro 
+do container que já está em execução! Legal, né?
+
+-- Vamos utilizar o comando docker exec -it <nome-do-container> <comando-a-ser-executado>, 
+testando o acesso ao terminal com o mesmo exemplo de container criado anteriormente:
+
+pessoa@trybe:~/course$ docker container run --rm -d --name meu-container alpine:3.14 sleep 300
+81e61d38ca40cb4707f44d9aba8c803c23ab4a45c23a83c55278eace2b345c3
+pessoa@trybe:~/course$ docker ps -a
+CONTAINER ID   IMAGE         COMMAND       CREATED          STATUS          PORTS     NAMES
+99ee42188fa7   alpine:3.14   "sleep 300"   14 seconds ago   Up 13 seconds             meu-container
+pessoa@trybe:~/course$ docker exec -it meu-container sh
+/ # ps aux
+PID   USER     TIME  COMMAND
+    1 root      0:00 sleep 300
+   14 root      0:00 sh
+   20 root      0:00 ps aux
+/ # exit
+pessoa@trybe:~/course$ docker stop -t 0 meu-container
+meu-container
+pessoa@trybe:~/course$ docker ps -a
+CONTAINER ID   IMAGE         COMMAND       CREATED          STATUS          PORTS     NAMES

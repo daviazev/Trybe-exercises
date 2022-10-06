@@ -1,0 +1,21 @@
+Modo “auto-remover”
+
+Este modo é útil para testar várias imagens Docker sem ficar 
+com uma lista de containers parados. A flag --rm indica para o 
+Docker que desejamos que um container seja removido ao final da 
+sua execução. Veja abaixo um exemplo do uso da flag:
+
+docker container run --rm alpine:3.14 echo "Hello World 3"
+
+⚠️ Importante: a flag --rm vai remover apenas o container! 
+A imagem alpine:3.14 ainda estará presente na máquina. 
+Podemos confirmar isso executando o comando docker images. 
+Veja abaixo a saída ao executar os três comandos em sequência:
+
+pessoa@trybe:~/course$ docker container run --rm alpine:3.14 echo "Hello World 4"
+Hello World 4!
+pessoa@trybe:~/course$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+pessoa@trybe:~/course$ docker images
+REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
+alpine       3.14      e04c818066af   2 weeks ago    5.59MB

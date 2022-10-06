@@ -1,0 +1,18 @@
+docker ps
+
+ou 
+
+docker container ls - mais atual
+
+--------
+
+    Entretanto, por padrão, o comando docker ps não exibe containers 
+    que foram parados ou que terminaram sua execução. Para visualizar
+    todos os containers atuais, incluindo os que estão em execução e 
+    também parados, é necessário utilizar a flag -a. Veja o exemplo de saída do comando abaixo:
+
+--------
+
+docker container ls -a
+
+

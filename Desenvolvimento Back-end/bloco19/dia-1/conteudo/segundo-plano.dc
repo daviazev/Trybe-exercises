@@ -1,0 +1,26 @@
+Modo “segundo plano”
+
+A flag -d ou --detach faz com que a execução do container 
+ocorra em segundo plano, ou seja, embora não esteja visível, 
+o container executará de forma assíncrona. 
+Esta opção é interessante quando o programa a ser executado 
+é um servidor ou algum processo que você sabe previamente 
+que terá uma execução demorada.
+
+Veja abaixo a saída ao executar um container no modo detached. 
+Neste exemplo, trocamos o argumento echo pela execução do programa sleep,
+que fará com que o container continue sua execução por 300 segundos (5 minutos):
+
+pessoa@trybe:~/course$ docker container run --rm -d alpine:3.14 sleep 300
+81e61d38ca40cb4707f44d9aba8c803c23ab4a45c23a83c55278eace2b345c3e
+pessoa@trybe:~/course$ docker ps -a
+CONTAINER ID   IMAGE         COMMAND       CREATED          STATUS          PORTS     NAMES
+81e61d38ca40   alpine:3.14   "sleep 300"   12 seconds ago   Up 12 seconds             amazing_thompson
+
+Curiosidade: o comando docker stop envia um pedido educado 
+(chamado internamente de SIGTERM) ao container para que ele 
+tenha tempo de encerrar tudo o que precisa antes de parar sua 
+execução de fato. Entretanto, o comando sleep que estamos 
+utilizando ignora esse pedido educado do Docker. 
+Para que o pedido seja forçado (chamado internamente de SIGKILL), vamos utilizar a flag -t 0.
+
