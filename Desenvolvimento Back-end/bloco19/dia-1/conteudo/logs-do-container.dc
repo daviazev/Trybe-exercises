@@ -1,0 +1,21 @@
+Ver os logs de um container em execução
+Quando executamos um novo container no modo detached, isto é, 
+em segundo plano, nós deixamos de ver as informações (logs, erros, etc) 
+que o programa está executando. Entretanto, o Docker oferece um comando
+ para que a gente possa ver essas informações sem precisar se conectar 
+ diretamente ao terminal do container.
+
+O comando é o seguinte: docker logs <flags> <nome-do-container>. 
+Vamos ver um exemplo de saída deste comando:
+
+pessoa@trybe:~/course$ docker container run -d --name meu-container alpine:3.14 date
+b89b81f17d0cb19edfcfae94d13f3b6dc0953d7cd9b1aaf0dbf4680d1d9b75ee
+pessoa@trybe:~$ docker ps -a
+CONTAINER ID   IMAGE         COMMAND   CREATED         STATUS                    PORTS     NAMES
+b89b81f17d0c   alpine:3.14   "date"    2 seconds ago   Exited (0) 1 second ago             meu-container
+pessoa@trybe:~$ docker logs meu-container
+Tue Apr 26 13:29:32 UTC 2022
+pessoa@trybe:~$ docker rm meu-container
+meu-container
+pessoa@trybe:~$
+

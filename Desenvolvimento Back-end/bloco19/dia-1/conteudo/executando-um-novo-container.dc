@@ -1,0 +1,47 @@
+➡️ Utilize o comando docker container run <flags>? <imagem>:<tag> <argumentos>? 
+para executar um container utilizando a imagem identificada pelo <imagem>:<tag>.
+
+- O exemplo abaixo executa um container usando a imagem Docker alpine e a tag 3.14:
+
+docker container run alpine:3.14 echo "Hello World"
+
+Recapitulando 🧠
+Vamos entender passo-a-passo tudo o que aconteceu durante a execução do comando anterior:
+
+
+1 - Pedimos para o Docker criar um novo container, 
+baseado na imagem chamada alpine, usando a tag 3.14 
+e passando os argumentos echo e "Hello World";
+
+2 - O Docker verifica se já temos esta imagem, 
+com esta tag, no disco da máquina;
+
+3 - Se a imagem não é encontrada, o Docker imprime
+na tela a mensagem Unable to find image 'alpine:3.14' 
+locally e começa a baixar a imagem do Docker Hub;
+ç
+4 - Com a imagem e a tag presentes no disco da máquina, 
+o Docker cria um processo isolado e utiliza a imagem 
+Docker como o “disco” base para este processo;
+
+5 - Como estamos subindo este container passando 
+os argumentos echo e "Hello World", o comportamento
+padrão da imagem alpine é executar este comando. 
+Por isso, nós vemos a saída Hello World no terminal!
+
+6 - Ao executar o comando docker ps -a, verificamos 
+que o container foi criado, porém ele já terminou 
+sua execução e ficou com o status Exited.
+
+
+⚠️ Atenção: veja que o Docker atribuiu um nome aleatório 
+para o nosso container. O Docker segue a seguinte regra
+para dar um nome a um novo container: <adjetivo>_<nome>.
+Entretanto, podemos utilizar a flag --name <nome-da-sua-escolha> 
+para dar um nome específico ao container criado, em vez de 
+obter um nome aleatório dado pelo Docker.
+
+Veja um exemplo abaixo onde nós utilizamos a flag para dar o 
+nome meu-container para o novo container que desejamos executar:
+
+docker container run --name xablauzinho alpine:3.14 echo "xablau"

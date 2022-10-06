@@ -1,0 +1,8 @@
+🚀 10 - Rode o comando cat /etc/debian_version que deve retornar a 
+versão atual do sistema do contêiner.
+
+cat /etc/debian_version
+
+RESULTADO
+
+11.5
