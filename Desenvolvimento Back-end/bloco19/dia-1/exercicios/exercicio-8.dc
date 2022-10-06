@@ -1,0 +1,3 @@
+🚀 8 - Inicie o mesmo contêiner novamente, sem criar outro. Valide se ele está ativo na lista de contêiners.
+
+docker container start meu-container

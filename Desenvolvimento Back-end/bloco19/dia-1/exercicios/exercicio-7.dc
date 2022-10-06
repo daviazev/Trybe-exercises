@@ -1,0 +1,8 @@
+🚀 7 - Verifique na sua lista de contêiners qual contêiner se refere ao 
+exercício que acabou de praticar.
+
+docker ps -a 
+
+ou 
+
+docker container ls -a
