@@ -1,0 +1,31 @@
+Uma imagem, vários containers!
+
+📝 Anote aí: podemos ter vários contêineres a partir de uma imagem Docker!
+
+Para testar isso na prática, vamos executar novamente o 
+comando docker run hello-world e visualizar o que acontece:
+
+pessoa@trybe:~$ docker run hello-world
+Hello from Docker!
+[...]
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+pessoa@trybe:~$ docker ps -a
+CONTAINER ID   IMAGE         COMMAND    CREATED          STATUS                      PORTS     NAMES
+5751a5cd20a6   hello-world   "/hello"   2 seconds ago    Exited (0) 1 second ago               gracious_ishizaka
+6c799b099fb0   hello-world   "/hello"   30 seconds ago   Exited (0) 29 seconds ago             blissful_sinoussi
+pessoa@trybe:~$ docker images
+REPOSITORY    TAG       IMAGE ID       CREATED        SIZE
+alpine        3.14      e04c818066af   3 weeks ago    5.59MB
+hello-world   latest    feb5d9fea6a5   7 months ago   13.3kB
+pessoa@trybe:~$
+
+Vamos entender o passo a passo do que aconteceu acima:
+
+- Nós já tínhamos executado o comando docker run hello-world no exemplo anterior;
+- Agora executamos o mesmo comando novamente;
+- A mensagem de boas-vindas do Docker aparece;
+- Verificamos a lista de containers em execução ou parados com o comando docker ps -a;
+- Vimos que temos dois containers diferentes baseados em uma mesma imagem;
+- Executamos o comando docker images e verificamos que ainda temos uma imagem hello-world:latest!

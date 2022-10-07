@@ -1,0 +1,15 @@
+Executando um novo container com nossa imagem
+
+Vamos executar um servidor web em nosso computador a partir da 
+nossa nova imagem Docker. Ao subir essa imagem como um novo container, 
+poderemos acessar este servidor através do nosso navegador!
+
+Vamos começar?
+
+pessoa@trybe:~$ docker images
+REPOSITORY         TAG       IMAGE ID       CREATED          SIZE
+meu-servidor-web   latest    5c1536911684   12 minutes ago   144MB
+httpd              2.4       c30a46771695   10 days ago      144MB
+pessoa@trybe:~$ docker run --rm -d -p 1234:80 --name meu-container meu-servidor-web
+e93c74aa767dff092caa42413d8982c4fd823376233812a28c4b76dbdf4f4b6f
+pessoa@trybe:~$

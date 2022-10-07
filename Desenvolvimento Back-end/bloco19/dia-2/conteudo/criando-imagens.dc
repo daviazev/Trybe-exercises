@@ -1,0 +1,15 @@
+Agora que já entendemos o que é uma imagem Docker, chegou o tão esperado 
+momento de criar nossa primeira imagem Docker! 🥳
+
+Para usar nossas aplicações dentro de containers, primeiro precisamos 
+criar uma imagem Docker para a aplicação! Podemos fazer isso a partir dos arquivos Dockerfile.
+
+O Dockerfile é um arquivo de configuração com uma linguagem própria, 
+que é usado pelo Docker como um passo a passo do que você deseja que aconteça.
+
+-- Imagine este arquivo como se fosse a receita que o Docker 
+deve seguir para criar uma nova imagem exatamente do jeito que a gente quer!
+
+para criar o arquivo use o comando "touch Dockerfile"
+
+-- veja o arquivo Dockerfile, nesta mesma pasta
