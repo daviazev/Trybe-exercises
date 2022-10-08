@@ -1,0 +1,9 @@
+🚀 Exercício:
+
+Vamos usar uma imagem disponível no DockerHub conhecida como 
+“cowsay” (uma vaca falante no terminal 🐮)!
+
+A ideia é deixarmos a mensagem para o cowsay parametrizável.
+Dessa forma, conseguiremos executar o comando:
+
+docker container run cowsay Muuuuuuhhh
