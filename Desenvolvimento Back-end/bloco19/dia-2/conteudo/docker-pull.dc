@@ -1,0 +1,33 @@
+Do mesmo jeito que usamos o comando git pull para obter o 
+código-fonte atualizado do GitHub, existe o comando docker 
+pull <nome-da-imagem>, onde podemos obter a imagem Docker 
+diretamente do Registry e já deixá-la em nosso computador. 
+Veja um exemplo de saída deste comando abaixo:
+
+pessoa@trybe:~$ docker images
+REPOSITORY    TAG       IMAGE ID       CREATED        SIZE
+hello-world   latest    feb5d9fea6a5   7 months ago   13.3kB
+pessoa@trybe:~$ docker pull alpine:3.14
+3.14: Pulling from library/alpine
+8663204ce13b: Pull complete
+Digest: sha256:06b5d462c92fc39303e6363c65e074559f8d6b1363250027ed5053557e3398c5
+Status: Downloaded newer image for alpine:3.14
+docker.io/library/alpine:3.14
+pessoa@trybe:~$ docker images
+REPOSITORY    TAG       IMAGE ID       CREATED        SIZE
+alpine        3.14      e04c818066af   3 weeks ago    5.59MB
+hello-world   latest    feb5d9fea6a5   7 months ago   13.3kB
+pessoa@trybe:~$
+
+Vamos acompanhar passo a passo o que aconteceu acima:
+
+- Executamos o comando docker images e vimos que tínhamos apenas 
+a imagem hello-world, com a tag latest.
+
+- Executamos o comando docker pull alpine:3.14, obtendo a
+imagem alpine, com a tag específica 3.14.
+
+- Executamos o comando docker images novamente e validamos que 
+agora a imagem alpine:3.14 aparece como uma das imagens Docker disponíveis localmente!
+
+

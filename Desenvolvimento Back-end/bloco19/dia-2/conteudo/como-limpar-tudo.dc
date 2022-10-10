@@ -1,0 +1,6 @@
+Limpando tudo antes de começar!
+
+Use o comando abaixo para remover todos os containers e 
+imagens Docker que estejam em seu computador para que você possa acompanhar os exemplos:
+
+docker system prune -af
