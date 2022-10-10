@@ -142,9 +142,9 @@
 
 - <strong> Bloco 19: Docker: Utilizando Containers </strong>
 
-* [ ] 19.1 - Introducao - Back-end
-* [ ] 19.1 - Utilizando Containers - Docker
-* [ ] 19.2 - Manipulanndo e Criação de Imagens no Docker
+* [x] 19.1 - Introducao - Back-end
+* [x] 19.1 - Utilizando Containers - Docker
+* [x] 19.2 - Manipulanndo e Criação de Imagens no Docker
 * [ ] 19.3 - Orquestrando Conteiners com Docker Compose
 * [ ] 19.4 - Projeto Docker Todo-list
 
