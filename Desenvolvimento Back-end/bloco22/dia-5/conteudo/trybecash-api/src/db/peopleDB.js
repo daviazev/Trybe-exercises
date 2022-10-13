@@ -7,6 +7,13 @@ const insert = (person) =>
     [person.firstName, person.lastName, person.email, person.phone]
   );
 
+const findAll = () => conn.execute('SELECT * FROM people');
+
+const findById = (id) =>
+  conn.execute('SELECT * FROM people WHERE id = ?', [id]);
+
 module.exports = {
   insert,
+  findAll,
+  findById,
 };
