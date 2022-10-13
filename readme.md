@@ -145,8 +145,8 @@
 * [x] 19.1 - Introducao - Back-end
 * [x] 19.1 - Utilizando Containers - Docker
 * [x] 19.2 - Manipulanndo e Criação de Imagens no Docker
-* [ ] 19.3 - Orquestrando Conteiners com Docker Compose
-* [ ] 19.4 - Projeto Docker Todo-list
+* [x] 19.3 - Orquestrando Conteiners com Docker Compose
+* [x] 19.4 - Projeto Docker Todo-list
 
 - <strong> Bloco 20: Introdução à SQL </strong>
 
