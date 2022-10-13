@@ -1,4 +1,4 @@
-version: "3"
+version: '3'
 
 services:
   database:
@@ -8,5 +8,4 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: trybecashdb
     ports:
-      - "33060:3306"
-
+      - '33060:3306'
