@@ -1,17 +1,18 @@
 const { writeFile } = require('fs').promises;
 const path = require('path');
-const readSimpsomsData = require('./index');
+const { readSimpsomsFamily } = require('./index');
 
 const newJson = async () => {
-  const data = await readSimpsomsData();
+  const data = await readSimpsomsFamily();
 
-  const filt = data.filter((char) => Number(char.id) <= 4);
+  const addNelson = JSON.stringify([
+    ...data,
+    { id: '5', name: 'Nelson Muntz' },
+  ]);
 
-  const addNelson = [...filt];
+  await writeFile(path.resolve(__dirname, './simpsonFamily.json'), addNelson);
 
-  await writeFile(path.resolve(__dirname, './simpsonFamily.json'));
-
-  console.log(filt);
+  console.log(await readSimpsomsFamily());
 };
 
 newJson();
