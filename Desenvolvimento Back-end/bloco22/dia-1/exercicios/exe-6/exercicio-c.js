@@ -1,7 +1,7 @@
 // o exercício pedia pra retirar os personagens com ids 6 e 10, mas eu fiz de outro jeito
 const fs = require('fs').promises;
 const path = require('path');
-const readSimpsomsData = require('./index');
+const { readSimpsomsData } = require('./index');
 
 const SIMPSOMS_DATA_PATH = './simpsons.json';
 

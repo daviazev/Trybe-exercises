@@ -1,4 +1,4 @@
-const readSimpsomsData = require('./index');
+const { readSimpsomsData } = require('./index');
 
 const simpsoms = async () => {
   const data = await readSimpsomsData();
