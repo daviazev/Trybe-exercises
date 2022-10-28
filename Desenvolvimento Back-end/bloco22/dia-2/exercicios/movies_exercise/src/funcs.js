@@ -13,4 +13,4 @@ const readMoviesData = async () => {
   }
 };
 
-module.exports = readMoviesData;
+module.exports = { readMoviesData };
