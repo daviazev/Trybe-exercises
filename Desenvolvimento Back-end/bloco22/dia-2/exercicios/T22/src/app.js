@@ -28,7 +28,7 @@ const activities = [
   app.get('/myActivities/:id', (req, res) => {
     const { id } = req.params;
 
-    const obj = activities.find((obj) => obj.id === parseFloat(id));
+    const obj = activities.find((object) => object.id === parseFloat(id));
 
     res.status(200).json(obj);
   });
