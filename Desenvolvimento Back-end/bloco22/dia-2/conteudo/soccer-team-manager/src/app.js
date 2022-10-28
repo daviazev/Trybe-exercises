@@ -21,6 +21,15 @@ const teams = [
 app.get('/', (_req, res) =>
   res.status(200).json({ message: 'Olá Mundo! xablau' }));
 
+app.get('/helloworld', (_req, res) =>
+  res.send('<h1>Olá Mundo!</h1>'));
+
+app.get('/trybe', (_req, res) =>
+  res.redirect('https://www.betrybe.com/'));
+
+// app.get('/index', (_req, res) =>
+//   res.render('./index.html'));
+
 app.get('/teams', (_req, res) => res.status(200).json({ teams }));
 
 app.post('/teams', (req, res) => {
