@@ -13,4 +13,10 @@ const readMoviesData = async () => {
   }
 };
 
-module.exports = { readMoviesData };
+const fetchMovieById = async (id) => {
+  const allMovies = await readMoviesData();
+  const findMovie = allMovies.find((movie) => movie.id === Number(id));
+  return findMovie;
+};
+
+module.exports = { readMoviesData, fetchMovieById };
