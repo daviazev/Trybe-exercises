@@ -25,29 +25,28 @@ const activities = [
   // Crie um endpoint do tipo GET com a rota 
   // /myActivities/:id, que possa listar uma atividade do array por id 🚀
 
-
   app.get('/myActivities/:id', (req, res) => {
     const { id } = req.params;
 
-    const obj = activities.find((obj) => obj.id === parseFloat(id))
+    const obj = activities.find((obj) => obj.id === parseFloat(id));
 
-    res.status(200).json(obj)
-  })
+    res.status(200).json(obj);
+  });
 
   // Crie um endpoint do tipo GET com a rota /myActivities, que possa listar todas as atividades do array
 
   app.get('/myActivities', (_req, res) => {
-    res.status(200).json({ results: activities })
-  })
+    res.status(200).json({ results: activities });
+  });
 
   // Crie um endpoint do tipo GET com a rota /filter/myActivities,
   // que possa listar todas as atividades filtradas por status do array.
 
-  app.get('/filter/myActivities', (req, res) => {
-    const todo = activities.filter((obj) => obj.status === 'A fazer')
-    const done = activities.filter((obj) => obj.status === 'Feito')
+  app.get('/filter/myActivities', (_req, res) => {
+    const todo = activities.filter((obj) => obj.status === 'A fazer');
+    const done = activities.filter((obj) => obj.status === 'Feito');
 
-    res.status(200).json({ todo, done })
-  })
+    res.status(200).json({ todo, done });
+  });
 
   module.exports = app;
