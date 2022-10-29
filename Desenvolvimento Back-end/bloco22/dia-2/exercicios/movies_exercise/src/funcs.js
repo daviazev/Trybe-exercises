@@ -46,9 +46,22 @@ const updateMovie = async (id, obj) => {
   await fs.writeFile(path.resolve(__dirname, MOVIE_DATA_PATH), updated);
 };
 
+const deleteMovie = async (id) => {
+  const data = await readMoviesData();
+
+  const removed = JSON.stringify(data.filter((obj) => obj.id !== Number(id)));
+  await fs.writeFile(path.resolve(__dirname, MOVIE_DATA_PATH), updated);
+};
+
 // addMovie({
 //   movie: 'Vingadores',
 //   price: 6,
 // });
 
-module.exports = { readMoviesData, fetchMovieById, addMovie, updateMovie };
+module.exports = {
+  readMoviesData,
+  fetchMovieById,
+  addMovie,
+  updateMovie,
+  deleteMovie,
+};
