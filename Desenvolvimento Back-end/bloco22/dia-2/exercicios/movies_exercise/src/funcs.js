@@ -19,4 +19,18 @@ const fetchMovieById = async (id) => {
   return findMovie;
 };
 
-module.exports = { readMoviesData, fetchMovieById };
+const addMovie = async (obj) => {
+  const data = await readMoviesData();
+  const lastId = data[data.length - 1].id;
+
+  const allMovies = JSON.stringify([...data, { id: lastId + 1, ...obj }]);
+
+  await fs.writeFile(path.resolve(__dirname, MOVIE_DATA_PATH), allMovies);
+};
+
+// addMovie({
+//   movie: 'Vingadores',
+//   price: 6,
+// });
+
+module.exports = { readMoviesData, fetchMovieById, addMovie };
