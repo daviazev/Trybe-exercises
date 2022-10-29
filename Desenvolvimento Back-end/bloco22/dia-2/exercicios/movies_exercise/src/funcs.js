@@ -28,6 +28,25 @@ const addMovie = async (obj) => {
   await fs.writeFile(path.resolve(__dirname, MOVIE_DATA_PATH), allMovies);
 };
 
+const updateMovie = async (id, obj) => {
+  const data = await readMoviesData();
+
+  const updating = data.map((movie) => {
+    if (movie.id === Number(id)) return { id: movie.id, ...obj };
+
+    return movie;
+  });
+
+  console.log(updating);
+};
+
+const avengers = {
+  movie: 'the simpsoms',
+  price: 99,
+};
+
+updateMovie('1', avengers);
+
 // addMovie({
 //   movie: 'Vingadores',
 //   price: 6,
