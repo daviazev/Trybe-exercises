@@ -3,6 +3,11 @@ const path = require('path');
 
 const MOVIE_DATA_PATH = './data/movies.json';
 
+const avengers = {
+  movie: 'the simpsoms',
+  price: 99,
+};
+
 const readMoviesData = async () => {
   try {
     const movies = await fs.readFile(path.resolve(__dirname, MOVIE_DATA_PATH));
@@ -37,19 +42,13 @@ const updateMovie = async (id, obj) => {
     return movie;
   });
 
-  console.log(updating);
+  const updated = JSON.stringify(updating);
+  await fs.writeFile(path.resolve(__dirname, MOVIE_DATA_PATH), updated);
 };
-
-const avengers = {
-  movie: 'the simpsoms',
-  price: 99,
-};
-
-updateMovie('1', avengers);
 
 // addMovie({
 //   movie: 'Vingadores',
 //   price: 6,
 // });
 
-module.exports = { readMoviesData, fetchMovieById, addMovie };
+module.exports = { readMoviesData, fetchMovieById, addMovie, updateMovie };

@@ -1,6 +1,11 @@
 const express = require('express');
 
-const { readMoviesData, fetchMovieById, addMovie } = require('./funcs');
+const {
+  readMoviesData,
+  fetchMovieById,
+  addMovie,
+  updateMovie,
+} = require('./funcs');
 
 const app = express();
 app.use(express.json());
@@ -26,6 +31,18 @@ app.post('/movies', async (req, res) => {
     res.status(CREATED).json({ movie, price });
   } catch (error) {
     console.log('erro');
+  }
+});
+
+app.put('/movies/:id', async (req, res) => {
+  const { id } = req.params;
+  const { movie, price } = req.body;
+
+  try {
+    await updateMovie(id, { movie, price });
+    res.status(OK).json({ movie, price });
+  } catch (error) {
+    res.status(400).json({ message: 'deu ruim' });
   }
 });
 
