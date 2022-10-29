@@ -5,6 +5,7 @@ const {
   fetchMovieById,
   addMovie,
   updateMovie,
+  deleteMovie,
 } = require('./funcs');
 
 const app = express();
@@ -44,6 +45,12 @@ app.put('/movies/:id', async (req, res) => {
   } catch (error) {
     res.status(400).json({ message: 'deu ruim' });
   }
+});
+
+app.delete('/movies/:id', async (req, res) => {
+  const { id } = req.params;
+  const removedMovie = await deleteMovie(id);
+  res.status(200).json(removedMovie);
 });
 
 module.exports = app;

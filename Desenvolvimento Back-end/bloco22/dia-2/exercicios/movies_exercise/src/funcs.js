@@ -50,7 +50,7 @@ const deleteMovie = async (id) => {
   const data = await readMoviesData();
 
   const removed = JSON.stringify(data.filter((obj) => obj.id !== Number(id)));
-  await fs.writeFile(path.resolve(__dirname, MOVIE_DATA_PATH), updated);
+  await fs.writeFile(path.resolve(__dirname, MOVIE_DATA_PATH), removed);
 };
 
 // addMovie({
