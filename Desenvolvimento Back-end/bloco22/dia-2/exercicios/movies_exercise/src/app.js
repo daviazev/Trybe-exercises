@@ -6,6 +6,7 @@ const {
   addMovie,
   updateMovie,
   deleteMovie,
+  listMovie,
 } = require('./funcs');
 
 const app = express();
@@ -13,6 +14,12 @@ app.use(express.json());
 
 const OK = 200;
 const CREATED = 201;
+
+app.get('/movies/search', async (req, res) => {
+  const { q } = req.query;
+  const response = await listMovie(q);
+  res.status(200).json(response);
+});
 
 app.get('/movies/:id', async (req, res) => {
   const { id } = req.params;
@@ -52,5 +59,7 @@ app.delete('/movies/:id', async (req, res) => {
   const removedMovie = await deleteMovie(id);
   res.status(200).json(removedMovie);
 });
+
+// https://www.google.com.br/search?q=Express
 
 module.exports = app;

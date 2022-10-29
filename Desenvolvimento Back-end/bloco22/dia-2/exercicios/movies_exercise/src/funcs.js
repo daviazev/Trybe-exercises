@@ -53,6 +53,16 @@ const deleteMovie = async (id) => {
   await fs.writeFile(path.resolve(__dirname, MOVIE_DATA_PATH), removed);
 };
 
+const listMovie = async (str) => {
+  const data = await readMoviesData();
+
+  const filt = data.filter((obj) =>
+    obj.movie.toLowerCase().includes(str.toLowerCase())
+  );
+
+  return filt;
+};
+
 // addMovie({
 //   movie: 'Vingadores',
 //   price: 6,
@@ -64,4 +74,5 @@ module.exports = {
   addMovie,
   updateMovie,
   deleteMovie,
+  listMovie,
 };
