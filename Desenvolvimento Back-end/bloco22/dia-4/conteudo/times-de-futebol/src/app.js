@@ -108,7 +108,10 @@ app.use(express.json());
 // monta o router na rota /teams (1)
 app.use('/teams', teamsRouter);
 
-// app.use(express.static('../images')); // NÃO FUNCIONOU :(
+const cors = require('cors');
+app.use(cors());
+
+// app.use(express.static('./images')); // NÃO FUNCIONOU :(
 
 app.use((err, _req, _res, next) => {
   console.error(err.stack);
