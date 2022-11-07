@@ -104,10 +104,14 @@ const teamsRouter = require('./routes/teamsRouter');
 
 const app = express();
 app.use(morgan('dev'));
-app.use(express.static('/images'));
 app.use(express.json());
 // monta o router na rota /teams (1)
 app.use('/teams', teamsRouter);
+
+const cors = require('cors');
+app.use(cors());
+
+// app.use(express.static('./images')); // NÃO FUNCIONOU :(
 
 app.use((err, _req, _res, next) => {
   console.error(err.stack);
