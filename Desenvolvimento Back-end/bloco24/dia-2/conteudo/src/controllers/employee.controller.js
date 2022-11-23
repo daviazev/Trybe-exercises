@@ -1,6 +1,7 @@
 // src/controllers/employee.controller.js
 
 const EmployeeService = require('../services/employee.service');
+const AddressService = require('../services/address.service');
 
 const getAll = async (_req, res) => {
   try {
@@ -21,6 +22,11 @@ const getById = async (req, res) => {
       return res
         .status(404)
         .json({ message: 'Pessoa colaboradora não encontrada' });
+    }
+
+    if (req.query.includeAddresses === 'true') {
+      const addresses = await AddressService.getAllByEmployeeId(id);
+      return res.status(200).json({ employee, addresses });
     }
 
     return res.status(200).json(employee);
