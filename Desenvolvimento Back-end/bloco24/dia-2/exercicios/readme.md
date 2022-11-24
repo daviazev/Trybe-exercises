@@ -1,0 +1,1 @@
+os exercícios de hoje foram feitos no repositório [exercise-sequelize-associations-11-1n](https://github.com/daviazev/exercise-sequelize-associations-11-1n) - é um repositório privado porque é um fork!
