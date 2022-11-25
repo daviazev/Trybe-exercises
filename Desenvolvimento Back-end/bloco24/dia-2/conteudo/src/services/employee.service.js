@@ -122,4 +122,9 @@ gerenciamento das transações.
 
 */
 
+// comentário sobre o commit anterior: eu escrevi errado, o correto era
+//  "adiciona conteúdo do dia 24.3 ao conteúdo do dia 24.2 - transactios"
+
+// isso se deu porque parte do conteúdo visto no dia 24.3 envolvia trechos do dia anterior
+
 module.exports = { getAll, getById, insert, insert2 };
