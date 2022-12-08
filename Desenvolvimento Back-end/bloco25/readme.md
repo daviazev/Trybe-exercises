@@ -1,0 +1,1 @@
+No bloco 25 tivemos master class de DevOps e Deploy
