@@ -9,4 +9,6 @@ router.get('/books', booksController.getAll);
 
 router.get('/books/:id', booksController.getById);
 
+router.post('/books', booksController.create);
+
 export default router;
