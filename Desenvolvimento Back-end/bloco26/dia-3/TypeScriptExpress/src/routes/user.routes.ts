@@ -11,4 +11,8 @@ const userController = new UserController();
 
 router.get('/users', userController.getAll);
 
+router.get('/users/:id', userController.getById);
+
+router.post('/users', userController.create);
+
 export default router;
