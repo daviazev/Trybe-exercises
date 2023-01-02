@@ -3,7 +3,7 @@
 import connection from '../models/connection';
 import BookModel from '../models/book.model';
 import Book from '../interfaces/book.interface';
-import { BadRequestError } from 'restify-errors';
+import { BadRequestError, NotFoundError } from 'restify-errors';
 
 const properties = ['title', 'price', 'author', 'isbn'];
 
@@ -74,6 +74,19 @@ class BookService {
     // depois de todas as verificações chamamos a camada de model
 
     return this.model.create(book);
+  }
+
+  public async update(book: Book, id: number): Promise<void> {
+    // vamos utilizar a mesma validação do método create
+    const isValidBook = BookService.validationBook(book);
+
+    if (typeof isValidBook === 'string') throw new BadRequestError(isValidBook);
+
+    const bookFound = await this.model.getById(id);
+
+    if (!bookFound) throw new NotFoundError('Book not found');
+
+    return this.model.update(book, id);
   }
 }
 
