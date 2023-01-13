@@ -166,46 +166,43 @@
 
 - <strong> Bloco 22: Introdução ao desenvolvimento Web com Node.js </strong>
 
-* [ ] 22.1 - Intro - Node.js
-* [ ] 22.1 - Node.js - Um motor Javascript
-* [ ] 22.2 - Node.js - Fluxo Assíncrono
-* [ ] 22.3 - Mocha, Chai e Sinon - Testes de Back-end com Node.js
-* [ ] 22.4 - Express - HTTP com Node.js
-* [ ] 22.5 - Express - Middlewares
-* [ ] 22.6 - Atividades + Projeto - Talker Manager
+* [x] 22.1 - Intro - Node.js
+* [x] 22.1 - Node.js - Um motor Javascript
+* [x] 22.2 - Node.js - Fluxo Assíncrono
+* [x] 22.3 - Mocha, Chai e Sinon - Testes de Back-end com Node.js
+* [x] 22.4 - Express - HTTP com Node.js
+* [x] 22.5 - Express - Middlewares
+* [x] 22.6 - Atividades + Projeto - Talker Manager
 
 - <strong> Bloco 23: Node.js: Camada de Serviço e Arquitetura Rest e Restful</strong>
 
-* [ ] 23.1 - Introdução - Arquitetura de Software
-* [ ] 23.1 - Arquitetura de Software - Camada de Model
-* [ ] 23.2 - Arquitetura de Software - Camada de Controller e Service
-* [ ] 23.3 - Arquitetura Web - Rest e Restful
-* [ ] 23.4 - Arquitetura de Software - Testando as camadas
-* [ ] 23.5 - Projeto - Store Manager
+* [x] 23.1 - Introdução - Arquitetura de Software
+* [x] 23.1 - Arquitetura de Software - Camada de Model
+* [x] 23.2 - Arquitetura de Software - Camada de Controller e Service
+* [x] 23.3 - Arquitetura Web - Rest e Restful
+* [x] 23.4 - Arquitetura de Software - Testando as camadas
+* [x] 23.5 - Projeto - Store Manager
 
 - <strong> Bloco 24: Node.js: ORM e Autenticação </strong>
 
-* [ ] 24.1 - Introdução - Node.js ORM e Autenticação
-* [ ] 24.1 - ORM - Interface da aplicação com o banco de dados
-* [ ] 24.2 - ORM - Associations
-* [ ] 24.3 - JWT - (JSON Web Token)
-* [ ] 24.4 - Testando APIs com Testes de Integração
-* [ ] 24.5 - Projeto - API de Blogs
+* [x] 24.1 - Introdução - Node.js ORM e Autenticação
+* [x] 24.1 - ORM - Interface da aplicação com o banco de dados
+* [x] 24.2 - ORM - Associations
+* [x] 24.3 - JWT - (JSON Web Token)
+* [x] 24.4 - Testando APIs com Testes de Integração
+* [x] 24.5 - Projeto - API de Blogs
 
-- <strong> Bloco 25: Deployment </strong>
+- <strong> Bloco 25: Masterclass: Implantação de Aplicações na Nuvem </strong>
 
-* [ ] 25.1 - Introdução - Deploy
-* [ ] 25.1 - Infraestrutura - Deploy com Heroku
-* [ ] 25.2 - Deploy Docker & Heroku
-* [ ] 25.3 - Projeto - Stranger Things
+* [ ] 25.1 - Infraestrutura: Deploy com Railway
 
 - <strong> Bloco 26: Typescript </strong>
 
-* [ ] 26.1 - Introdução - Typescript
-* [ ] 26.1 - Introdução ao Typescript
-* [ ] 26.2 - Tipagem estática e Generics
-* [ ] 26.3 - Express com Typescript
-* [ ] 26.4 - Projeto - Trybe Smith
+* [x] 26.1 - Introdução - Typescript
+* [x] 26.1 - Introdução ao Typescript
+* [x] 26.2 - Tipagem estática e Generics
+* [x] 26.3 - Express com Typescript
+* [x] 26.4 - Projeto - Trybe Smith
 
 - <strong> Bloco 27: Programação Orientada a Objetos - POO e Solid </strong>
 
