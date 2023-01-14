@@ -1,6 +1,7 @@
 import Animal from './Animal';
 import Bird from './Bird';
 import MyClass from './myClass';
+import SocialMediaAccount from './Profile';
 import { Subclass, Superclass } from './Superclass';
 
 const main = (animal: Animal) => {
@@ -32,3 +33,7 @@ parrot.fly();
 const number = new MyClass(100);
 
 console.log(number.myFunc(100));
+
+const socialMediaAccount = new SocialMediaAccount();
+socialMediaAccount.editProfile('Manuella', 'manu@trybe.com');
+socialMediaAccount.printProfile();

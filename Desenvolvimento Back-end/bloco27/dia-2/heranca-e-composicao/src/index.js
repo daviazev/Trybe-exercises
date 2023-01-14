@@ -2,6 +2,7 @@
 exports.__esModule = true;
 var Bird_1 = require("./Bird");
 var myClass_1 = require("./myClass");
+var Profile_1 = require("./Profile");
 var Superclass_1 = require("./Superclass");
 var main = function (animal) {
     console.log(animal.age);
@@ -25,3 +26,6 @@ parrot.fly();
   */
 var number = new myClass_1["default"](100);
 console.log(number.myFunc(100));
+var socialMediaAccount = new Profile_1["default"]();
+socialMediaAccount.editProfile('Manuella', 'manu@trybe.com');
+socialMediaAccount.printProfile();
