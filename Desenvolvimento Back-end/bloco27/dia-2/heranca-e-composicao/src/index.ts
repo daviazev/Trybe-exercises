@@ -1,5 +1,10 @@
 import Animal from './Animal';
 import Bird from './Bird';
+import {
+  ConsoleLogger,
+  ConsoleLogger2,
+  ExampleDatabase,
+} from './ConsoleLogger';
 import { Friend, SocialMediaAccount2 } from './Friend';
 import MyClass from './myClass';
 import SocialMediaAccount from './Profile';
@@ -50,3 +55,14 @@ friendFernando.setNickname('Fernando');
 socialMediaAccount2.addFriend(friendCarol);
 socialMediaAccount2.addFriend(friendFernando);
 socialMediaAccount2.printFriends();
+
+const log1 = new ConsoleLogger();
+const log2 = new ConsoleLogger2();
+
+const exampleDB1 = new ExampleDatabase(log1);
+const exampleDB2 = new ExampleDatabase(log2);
+const exampleDB3 = new ExampleDatabase();
+
+exampleDB1.save('kedavra', 'avada');
+exampleDB2.save('blau', 'xa');
+exampleDB3.save('louco', 'muito');
