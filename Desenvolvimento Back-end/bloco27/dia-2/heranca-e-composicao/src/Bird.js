@@ -1,39 +1,24 @@
 "use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 exports.__esModule = true;
-var Animal_1 = require("./Animal");
-var Bird = /** @class */ (function (_super) {
-    __extends(Bird, _super);
-    function Bird(name) {
-        var _this = _super.call(this, new Date()) || this;
-        _this.name = name;
-        return _this;
+var Bird = /** @class */ (function () {
+    function Bird(name, birthDate) {
+        this.name = name;
+        this.birthDate = birthDate;
     }
+    Object.defineProperty(Bird.prototype, "age", {
+        get: function () {
+            var timeDiff = Math.abs(Date.now() - new Date(this.birthDate).getTime());
+            return Math.floor(timeDiff / (1000 * 3600 * 24) / 365.25);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Bird.prototype.getBirthDate = function () {
+        return this.birthDate;
+    };
     Bird.prototype.fly = function () {
         console.log("".concat(this.name, " est\u00E1 voando!"));
     };
     return Bird;
-}(Animal_1["default"]));
+}());
 exports["default"] = Bird;
-var parrot = new Bird('Papagaio');
-console.log(parrot.age);
-parrot.fly();
-/*
-  Saída (código executado em Mar/2022):
-  4
-  Papagaio está voando!
-  */
