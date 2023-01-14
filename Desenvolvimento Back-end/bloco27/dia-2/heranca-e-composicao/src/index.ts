@@ -1,5 +1,6 @@
 import Animal from './Animal';
 import Bird from './Bird';
+import MyClass from './myClass';
 import { Subclass, Superclass } from './Superclass';
 
 const main = (animal: Animal) => {
@@ -27,3 +28,7 @@ parrot.fly();
   4
   Papagaio está voando!
   */
+
+const number = new MyClass(100);
+
+console.log(number.myFunc(100));
