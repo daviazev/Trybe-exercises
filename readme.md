@@ -206,7 +206,7 @@
 
 - <strong> Bloco 27: Programação Orientada a Objetos - POO e Solid </strong>
 
-* [ ] 27.1 - Introdução à Orientação a Objetos
+* [x] 27.1 - Introdução à Orientação a Objetos
 * [ ] 27.2 - Herança e Interfaces
 * [ ] 27.3 - Polimorfismo
 * [ ] 27.4 - SOLID - Introdução e Princípios S, O e D
