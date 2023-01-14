@@ -1,6 +1,7 @@
 import Animal from './Animal';
 import Bird from './Bird';
 import Mammal from './Mammal';
+import { Subclass, Superclass } from './Superclass';
 
 const tiger = new Mammal('Tigre', new Date(Date.parse('May 03, 2020')));
 
@@ -28,3 +29,13 @@ const parrot = new Bird('Papagaio', new Date(Date.parse('Jun 07, 2017')));
 
 console.log(parrot.age);
 parrot.fly();
+
+const myFunc = (obj: Superclass) => {
+  obj.sayHello();
+};
+
+const ex1 = new Superclass();
+const ex2 = new Subclass();
+
+myFunc(ex1);
+myFunc(ex2);

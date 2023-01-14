@@ -1,4 +1,5 @@
 "use strict";
+// PARA FIXAR
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -15,23 +16,23 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 exports.__esModule = true;
-var Animal_1 = require("./Animal");
-var Bird = /** @class */ (function (_super) {
-    __extends(Bird, _super);
-    function Bird() {
+exports.Subclass = exports.Superclass = void 0;
+var Superclass = /** @class */ (function () {
+    function Superclass(isSuper) {
+        if (isSuper === void 0) { isSuper = true; }
+        this.isSuper = isSuper;
+    }
+    Superclass.prototype.sayHello = function () {
+        console.log('Olá mundo!');
+    };
+    return Superclass;
+}());
+exports.Superclass = Superclass;
+var Subclass = /** @class */ (function (_super) {
+    __extends(Subclass, _super);
+    function Subclass() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    Bird.prototype.fly = function () {
-        console.log("".concat(this.name, " est\u00E1 voando!"));
-    };
-    return Bird;
-}(Animal_1["default"]));
-exports["default"] = Bird;
-var parrot = new Bird('Papagaio', new Date(Date.parse('Jun 07, 2017')));
-console.log(parrot.age);
-parrot.fly();
-/*
-  Saída (código executado em Mar/2022):
-  4
-  Papagaio está voando!
-  */
+    return Subclass;
+}(Superclass));
+exports.Subclass = Subclass;
