@@ -18,8 +18,10 @@ exports.__esModule = true;
 var Animal_1 = require("./Animal");
 var Bird = /** @class */ (function (_super) {
     __extends(Bird, _super);
-    function Bird() {
-        return _super !== null && _super.apply(this, arguments) || this;
+    function Bird(name) {
+        var _this = _super.call(this, new Date()) || this;
+        _this.name = name;
+        return _this;
     }
     Bird.prototype.fly = function () {
         console.log("".concat(this.name, " est\u00E1 voando!"));
@@ -27,7 +29,7 @@ var Bird = /** @class */ (function (_super) {
     return Bird;
 }(Animal_1["default"]));
 exports["default"] = Bird;
-var parrot = new Bird('Papagaio', new Date(Date.parse('Jun 07, 2017')));
+var parrot = new Bird('Papagaio');
 console.log(parrot.age);
 parrot.fly();
 /*

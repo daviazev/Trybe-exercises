@@ -21,8 +21,7 @@ var Animal = /** @class */ (function () {
       Obs: Usando essa sintaxe é necessário indicar explicitamente
       logo antes do nome do atributo se ele é public, private, protected ou readonly
     */
-    function Animal(name, birthDate) {
-        this.name = name;
+    function Animal(birthDate) {
         this.birthDate = birthDate;
     }
     Object.defineProperty(Animal.prototype, "age", {

@@ -8,4 +8,9 @@ export class Superclass {
   }
 }
 
-export class Subclass extends Superclass {}
+export class Subclass extends Superclass {
+  constructor() {
+    super();
+    this.isSuper = false;
+  }
+}

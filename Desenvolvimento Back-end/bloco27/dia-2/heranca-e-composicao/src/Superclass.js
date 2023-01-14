@@ -31,7 +31,9 @@ exports.Superclass = Superclass;
 var Subclass = /** @class */ (function (_super) {
     __extends(Subclass, _super);
     function Subclass() {
-        return _super !== null && _super.apply(this, arguments) || this;
+        var _this = _super.call(this) || this;
+        _this.isSuper = false;
+        return _this;
     }
     return Subclass;
 }(Superclass));
