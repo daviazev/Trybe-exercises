@@ -1,5 +1,5 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var Animal = /** @class */ (function () {
     /*
       Ao invés de declarar os atributos antes do construtor, receber parâmetros
@@ -38,4 +38,4 @@ var Animal = /** @class */ (function () {
     });
     return Animal;
 }());
-exports["default"] = Animal;
+exports.default = Animal;

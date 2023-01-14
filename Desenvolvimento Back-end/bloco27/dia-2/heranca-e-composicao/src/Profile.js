@@ -1,5 +1,5 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var Profile = /** @class */ (function () {
     function Profile() {
     }
@@ -10,7 +10,7 @@ var Profile = /** @class */ (function () {
         this.email = email;
     };
     Profile.prototype.toString = function () {
-        return "name - [".concat(this.name, "] - email - [").concat(this.email, "]");
+        return "name - [" + this.name + "] - email - [" + this.email + "]";
     };
     return Profile;
 }());
@@ -28,4 +28,4 @@ var SocialMediaAccount = /** @class */ (function () {
     };
     return SocialMediaAccount;
 }());
-exports["default"] = SocialMediaAccount;
+exports.default = SocialMediaAccount;

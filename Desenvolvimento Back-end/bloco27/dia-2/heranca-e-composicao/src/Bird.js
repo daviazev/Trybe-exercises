@@ -1,5 +1,5 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var Bird = /** @class */ (function () {
     function Bird(name, birthDate) {
         this.name = name;
@@ -17,8 +17,8 @@ var Bird = /** @class */ (function () {
         return this.birthDate;
     };
     Bird.prototype.fly = function () {
-        console.log("".concat(this.name, " est\u00E1 voando!"));
+        console.log(this.name + " est\u00E1 voando!");
     };
     return Bird;
 }());
-exports["default"] = Bird;
+exports.default = Bird;

@@ -1,5 +1,5 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.SocialMediaAccount2 = exports.Friend = void 0;
 var Friend = /** @class */ (function () {
     function Friend() {

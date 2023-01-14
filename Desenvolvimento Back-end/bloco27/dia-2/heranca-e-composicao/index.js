@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var Bird_1 = require("./Bird");
-var ConsoleLogger_1 = require("./ConsoleLogger");
-var Friend_1 = require("./Friend");
-var myClass_1 = require("./myClass");
-var Profile_1 = require("./Profile");
-var Superclass_1 = require("./Superclass");
+var Bird_1 = require("./src/Bird");
+var ConsoleLogger_1 = require("./src/ConsoleLogger");
+var Friend_1 = require("./src/Friend");
+var myClass_1 = require("./src/myClass");
+var Profile_1 = require("./src/Profile");
+var Superclass_1 = require("./src/Superclass");
 var main = function (animal) {
     console.log(animal.age);
 };

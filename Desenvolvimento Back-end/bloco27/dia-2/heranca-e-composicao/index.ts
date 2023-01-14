@@ -1,14 +1,14 @@
-import Animal from './Animal';
-import Bird from './Bird';
+import Animal from './src/Animal';
+import Bird from './src/Bird';
 import {
   ConsoleLogger,
   ConsoleLogger2,
   ExampleDatabase,
-} from './ConsoleLogger';
-import { Friend, SocialMediaAccount2 } from './Friend';
-import MyClass from './myClass';
-import SocialMediaAccount from './Profile';
-import { Subclass, Superclass } from './Superclass';
+} from './src/ConsoleLogger';
+import { Friend, SocialMediaAccount2 } from './src/Friend';
+import MyClass from './src/myClass';
+import SocialMediaAccount from './src/Profile';
+import { Subclass, Superclass } from './src/Superclass';
 
 const main = (animal: Animal) => {
   console.log(animal.age);

@@ -1,5 +1,5 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.ExampleDatabase = exports.ConsoleLogger2 = exports.ConsoleLogger = void 0;
 var ConsoleLogger = /** @class */ (function () {
     function ConsoleLogger() {
@@ -25,7 +25,7 @@ var ExampleDatabase = /** @class */ (function () {
         this.logger = logger;
     }
     ExampleDatabase.prototype.save = function (key, value) {
-        this.logger.log("Valor ".concat(value, " salvo na chave ").concat(key));
+        this.logger.log("Valor " + value + " salvo na chave " + key);
     };
     return ExampleDatabase;
 }());
