@@ -1,12 +1,16 @@
 import Animal from './Animal';
 
 export default class Bird extends Animal {
+  constructor(public name: string) {
+    super(new Date()); // super supimpa
+  }
+
   fly() {
     console.log(`${this.name} está voando!`);
   }
 }
 
-const parrot = new Bird('Papagaio', new Date(Date.parse('Jun 07, 2017')));
+const parrot = new Bird('Papagaio');
 
 console.log(parrot.age);
 parrot.fly();
