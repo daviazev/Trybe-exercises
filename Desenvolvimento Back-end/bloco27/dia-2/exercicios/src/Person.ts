@@ -1,10 +1,7 @@
 export default class Person {
-  private _name: string;
-  private _birthDate: Date;
-
-  constructor(name: string, birthDate: Date) {
-    this._name = name;
-    this._birthDate = birthDate;
+  constructor(private _name: string, private _birthDate: Date) {
+    this.name = _name;
+    this.birthDate = _birthDate;
   }
 
   get name(): string {
@@ -16,9 +13,8 @@ export default class Person {
   }
 
   set name(name: string) {
-    if (name.length >= 3) {
-      this._name = name;
-    }
+    this.validateName(name);
+    this._name = name;
   }
 
   set birthDate(date: Date) {
@@ -31,6 +27,11 @@ export default class Person {
     const diff = Math.abs(new Date().getTime() - value.getTime()); // diferença em milissegundos entre a data atual e a data passada por parâmetro
     const yearMs = 31_536_000_000; // 1 ano = 31536000000 milissegundos
     return Math.floor(diff / yearMs);
+  }
+
+  private validateName(name: string): void {
+    if (name.length < 3)
+      throw new Error('o nome deve ter 3 ou mais caracteres!');
   }
 
   private validateDate(date: Date): void {
