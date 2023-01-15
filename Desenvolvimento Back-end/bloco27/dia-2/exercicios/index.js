@@ -28,3 +28,13 @@ var testInterfaceEmployee = {
     },
 };
 console.log(testInterfaceEmployee);
+// ------------------------------ EXERCÍCIO 4 ------------------------------
+var Subject_1 = require("./src/Subject");
+var matematica = new Subject_1.default('Matemática');
+var historia = new Subject_1.default('História');
+var filosofia = new Subject_1.default('Filosofia');
+console.log(matematica);
+console.log(historia);
+console.log(filosofia);
+matematica.name = 'mat';
+console.log(matematica);

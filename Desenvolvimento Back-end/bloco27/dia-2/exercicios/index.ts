@@ -45,3 +45,19 @@ const testInterfaceEmployee: Employee = {
 };
 
 console.log(testInterfaceEmployee);
+
+// ------------------------------ EXERCÍCIO 4 ------------------------------
+
+import Subject from './src/Subject';
+
+const matematica = new Subject('Matemática');
+const historia = new Subject('História');
+const filosofia = new Subject('Filosofia');
+
+console.log(matematica);
+console.log(historia);
+console.log(filosofia);
+
+// matematica.name = 'ma'; // dá erro porque o nome tem que possuir no mínimo 3 caracteres
+
+console.log(matematica);
