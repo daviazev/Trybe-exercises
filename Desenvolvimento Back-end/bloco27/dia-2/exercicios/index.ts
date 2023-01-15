@@ -23,3 +23,25 @@ student1.assignmentsGrades = [1, 2];
 console.log(student1);
 console.log(student1.sumGrades());
 console.log(student1.sumAverageGrade());
+
+// ------------------------------ EXERCÍCIO 3 ------------------------------
+// esse caso de teste eu copiei do gabarito, mas fiz a interface
+
+import Employee from './src/interfaces/Employee';
+
+const testInterfaceEmployee: Employee = {
+  registration: 'FNC1234567891011',
+  salary: 1200.0,
+  admissionDate: new Date(),
+
+  generateRegistration(): string {
+    const randomStr = String(Date.now() * (Math.random() + 1)).replace(
+      /\W/g,
+      ''
+    );
+
+    return `FNC${randomStr}`;
+  },
+};
+
+console.log(testInterfaceEmployee);

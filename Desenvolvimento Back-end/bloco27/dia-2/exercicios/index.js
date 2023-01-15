@@ -18,3 +18,13 @@ student1.assignmentsGrades = [1, 2];
 console.log(student1);
 console.log(student1.sumGrades());
 console.log(student1.sumAverageGrade());
+var testInterfaceEmployee = {
+    registration: 'FNC1234567891011',
+    salary: 1200.0,
+    admissionDate: new Date(),
+    generateRegistration: function () {
+        var randomStr = String(Date.now() * (Math.random() + 1)).replace(/\W/g, '');
+        return "FNC" + randomStr;
+    },
+};
+console.log(testInterfaceEmployee);
