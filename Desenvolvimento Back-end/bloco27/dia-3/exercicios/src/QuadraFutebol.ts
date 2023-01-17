@@ -6,10 +6,10 @@ import IAgenda from './interfaces/IAgenda';
 export default class QuadraFutebol extends Quadra {
   public futebolData: IFutebol = normas.futebol;
 
-  public reservar<IFutebol>(horas: Date): IAgenda<IFutebol> {
+  public reservar<IFutebol>(date: Date): IAgenda<IFutebol> {
     return {
       protocolo: `protocolo: ${new Date().getTime()}`,
-      data: horas,
+      data: date,
       regras: this.futebolData as unknown as IFutebol,
     };
   }
