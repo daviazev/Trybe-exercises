@@ -207,20 +207,19 @@
 - <strong> Bloco 27: Programação Orientada a Objetos - POO e Solid </strong>
 
 * [x] 27.1 - Introdução à Orientação a Objetos
-* [ ] 27.2 - Herança e Interfaces
-* [ ] 27.3 - Polimorfismo
+* [x] 27.2 - Herança e Interfaces
+* [x] 27.3 - Polimorfismo
 * [ ] 27.4 - SOLID - Introdução e Princípios S, O e D
 * [ ] 27.5 - SOLID - Princípios L e I
-* [ ] 27.6 - Projeto - Trybers and Dragons
+* [x] 27.6 - Projeto - Trybers and Dragons
 
 - <strong> Bloco 28: Projeto - TFC - Trybe Futebol Clube </strong>
 
-* [ ] 28.1 - Projeto - TFC - Trybe Futebol Clube
+* [x] 28.1 - Projeto - TFC - Trybe Futebol Clube
 
 - <strong> Bloco 29: Introdução ao MongoDB </strong>
 
-* [ ] 29.1 - Introdução - NoSQL
-* [ ] 29.1 - MongoDB - Introdução
+* [x] 29.1 - MongoDB - Introdução
 * [ ] 29.2 - Filter Operators
 * [ ] 29.3 - Operadores de consulta
 * [ ] 29.4 - Updates Simples
