@@ -1,0 +1,11 @@
+// { campo: { $exists: <boolean> } }
+
+// OBS: se rodar isso aqui, não vai funcionar porque não o banco de dados desse exemplo não existe 
+// eu sem querer excluí :D kkkkkk - mas fica aqui para registro que estudei o conteúdo 
+
+// Essa consulta retorna todos os documentos da coleção inventory em que o atributo qty existe.
+db.inventory.find({ qty: { $exists: true } })
+
+// Você também pode combinar operadores, como no exemplo abaixo:
+db.inventory.find({ qty: { $exists: true, $nin: [ 5, 15 ] } })
+// Essa consulta seleciona todos os documentos da coleção inventory em que o atributo qty existe E seu valor é diferente de 5 e 15.
