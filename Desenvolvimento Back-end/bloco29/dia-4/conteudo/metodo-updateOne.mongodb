@@ -1,0 +1,29 @@
+// Método updateOne()
+
+// Para alterar um único documento, você pode utilizar o método updateOne(). 
+// Como o nome do método diz, ele altera apenas o primeiro documento que satisfaça o critério de filtro.
+
+// No exemplo abaixo, o método db.colecao.updateOne() é utilizado para alterar o primeiro documento 
+// na coleção inventory em que o campo item seja igual a "paper":
+
+use("conteudo_trybe");
+db.inventory.updateOne(
+  { item: "paper" }, // filtro - outros operadores podem ser usados 
+  { $set:  { "size.uom": "cm", status: "P" } } // operação de update em si
+)
+
+// retorno: 
+
+// {
+//   "acknowledged": true,
+//   "insertedId": null,
+//   "matchedCount": 1,
+//   "modifiedCount": 0,
+//   "upsertedCount": 0
+// }
+
+// ⚠️ Chamando o método db.colecao.updateOne() com o parâmetro de filtro vazio { }, 
+// o resultado é a atualização do primeiro documento presente em colecao. ⚠️
+
+use("conteudo_trybe");
+db.inventory.find()
