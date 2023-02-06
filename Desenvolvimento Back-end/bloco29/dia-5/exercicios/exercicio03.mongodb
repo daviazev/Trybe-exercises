@@ -1,0 +1,14 @@
+// 🚀 Exercício 3: Remova a categoria "action" do filme Batman.
+use("cinema")
+db.movies.updateOne(
+  { title: "Batman" },
+  {
+    // $pop: { -------------------> Era pra ser usado o pull, então comentei o código que havia feito
+    //   category: -1 
+    // }
+    $pull: {
+      category: "action" // -----> era para ter feito assim, embora o enunciado não tenha deixado explícito e ambos tenham funcionado
+    }
+  }
+)
+db.movies.find()
