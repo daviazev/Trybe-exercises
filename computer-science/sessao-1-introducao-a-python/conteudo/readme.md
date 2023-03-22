@@ -1,1 +1,0 @@
-OBS: a maior parte do conteúdo de introdução à python foi feita usando o terminal
