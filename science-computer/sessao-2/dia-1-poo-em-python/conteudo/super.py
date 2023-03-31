@@ -20,3 +20,10 @@ b = B()
 b.faz_outra_coisa()
 # Vou printar o valor pelo método criado em A
 # 1
+
+
+# Herança multi-nível
+# Uma classe pode herdar de outra que herda de outra, ou seja, A herda de B, B herda de C. 
+# Não há diferenças significativas no funcionamento, mas é interessante saber que é possível 
+# e relativamente normal. Por mais que você não escreva algo assim, é possível que veja bastante 
+# em códigos de outras pessoas.

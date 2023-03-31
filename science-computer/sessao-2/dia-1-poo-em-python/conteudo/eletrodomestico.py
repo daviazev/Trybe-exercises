@@ -38,3 +38,13 @@ class Eletrodomestico:
 
 class Liquidificador(Eletrodomestico):
     pass
+
+# ----------- Exercício de fixação
+
+class Secador(Eletrodomestico):
+    ...
+
+secador = Secador('vermelho', 200, 150, 100)
+print(secador.cor)
+
+# -----------
