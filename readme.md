@@ -236,25 +236,20 @@
 
 * [ ] 31.1 - Projeto - App de Delivery
 
-- <strong> Bloco 32: MasterClass - VPS, CI/CD </strong>
-
-* [ ] 32.1 - VPS
-* [ ] 32.2 - VPS
-
 ### Ciencia da Computação :hourglass_flowing_sand:
 
 - <strong> Bloco 33: Introdução à Python </strong>
 
-* [ ] 33.1 - Introdução - Ciência da Computação
-* [ ] 33.1 - Aprendendo Python
-* [ ] 33.2 - Entrada e Saída de Dadps
-* [ ] 33.3 - Testes
-* [ ] 33.4 - Projeto - Job Insigths
+* [x] 33.1 - Introdução - Ciência da Computação
+* [x] 33.1 - Aprendendo Python
+* [x] 33.2 - Entrada e Saída de Dadps
+* [x] 33.3 - Testes
+* [x] 33.4 - Projeto - Job Insigths
 
 - <strong> Bloco 34: Padrões de Projeto </strong>
 
-* [ ] 34.1 - POO em Python
-* [ ] 34.2 - Padrões - Iterator, Adapter, Strategy
+* [x] 34.1 - POO em Python
+* [x] 34.2 - Padrões - Iterator, Adapter, Strategy
 * [ ] 34.3 - Padrões - Decorator, Observer, Factory
 * [ ] 34.4 - Projeto - Relatórios de Estoque
 
